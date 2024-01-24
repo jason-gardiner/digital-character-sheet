@@ -2,4 +2,8 @@
  Online character sheet for Dungeons and Dragons
 
 
-Alex Mayo
+ Contributors:
+ Anne Konicki
+ Jason Gardiner
+ Alex Mayo
+
