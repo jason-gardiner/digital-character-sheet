@@ -1,0 +1,47 @@
+{
+
+
+
+  "Custom Spell": {
+    "level": 3,
+    "time": "1 action",
+    "range": "150 feet",
+    "duration": "1 round",
+    "classes": [
+      "Sorcerer",
+      "Wizard",
+      "Warlock",
+      "Paladin"
+    ],
+    "components": {
+      "S": true,
+      "V": true,
+      "M": [
+        "A bit of Sponge",
+        "5 gp"
+      ]
+    },
+    "roll": "3d8",
+    "description": "This spell does a thing!",
+    "source": "Player's Handbook"
+  },
+
+
+  "Super Secret Second Custom Spell": {
+    "level": 1,
+    "time": "1 bonus action",
+    "range": "Touch",
+    "duration": "3 rounds",
+    "classes": [
+      "Wizard"
+    ],
+    "components": {
+      "S": false,
+      "V": true,
+      "M": []
+    },
+    "roll": "2d4",
+    "description": "This spell does a different thing!",
+    "source": "Player's Handbook"
+  }
+}
