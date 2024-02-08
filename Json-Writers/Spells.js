@@ -24,6 +24,19 @@ SpellJsonOne['compendium']['spell'].forEach(spell => {
 
     let SpellName = spell.name;
     delete spell.name;
+
+    //console.log(spell.description);
+
+    for (let i = 0; i < spell.text.length; i++) {
+        if (spell.text[i] === "") {
+            spell.text[i] = "\n"
+        }
+    }
+
+    if (spell.text instanceof Array) {
+        spell.text = spell.text.join("");
+    }
+
     let customSpell = {
         "level": parseInt(spell.level),
         "time": spell.time,
@@ -31,9 +44,7 @@ SpellJsonOne['compendium']['spell'].forEach(spell => {
         "duration": spell.duration,
         "classes:": [],
         "components": {
-            "S": true,
-            "V": true,
-            "M": {}
+            "S": true, "V": true, "M": {}
         },
         "roll": roll,
         "description": spell.text,
@@ -43,7 +54,7 @@ SpellJsonOne['compendium']['spell'].forEach(spell => {
     spells[SpellName] = customSpell;
 });
 
-const fs = require("fs")
+const fs = require("fs");
 const data = JSON.stringify(spells)
 fs.writeFile('./CustomSpells.json', data, (error) => {
     if (error) {
