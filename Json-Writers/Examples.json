@@ -1,0 +1,154 @@
+{
+  "Custom Spell": {
+    "level": 3,
+    "time": "1 action",
+    "range": "150 feet",
+    "duration": "1 round",
+    "classes": [
+      "Sorcerer",
+      "Wizard",
+      "Warlock",
+      "Paladin"
+    ],
+    "components": {
+      "S": true,
+      "V": true,
+      "M": [
+        "A bit of Sponge",
+        "5 gp"
+      ]
+    },
+    "roll": "3d8",
+    "description": "This spell does a thing!",
+    "source": "Player's Handbook"
+  },
+
+  "Custom Class": {
+    "hit_die": 10, // 5e-SRD_Classes.json
+    "prof_skills": {
+      "choose_x": 2, // 5e-SRD_Classes.json (proficiency_choices.choose)
+      "options": [ // 5e-SRD_Classes.json (proficiency_choices.from.options.item.name) need to cut 'Skill: ' from the front
+        "Animal Handling",
+        "Survival",
+        "Sleight of Hand"
+      ]
+    },
+    "prof_equipment": [ // 5e-SRD_Classes.json (proficiencies.name)
+      "Light Armor",
+      "Medium Armor",
+      "Shield",
+      "Simple Weapons"
+    ],
+    "prof_saves": [ // 5e-SRD_Classes.json (proficiencies.name)
+      "Strength",
+      "Dexterity"
+    ],
+    "start_equipment_guaranteed": [
+      {
+        "name": "explorer's pack", // 5e-SRD_Classes.json (starting_equipment)
+        "equipment_category": "gear", // 5e-SRD-Equipment.json (equipment_category.index)
+        "contents": [ // 5e-SRD-Equipment.json
+          {
+            "name": "Backpack", // 5e-SRD-Equipment.json
+            "desc": "A bag to hold things",
+            "cost": {
+              "quantity": 2,
+              "unit": "gp"
+            },
+            "weight": 5,
+            "quantity": 1
+          }
+        ],
+        "cost": { // 5e-SRD-Equipment.json
+          "quantity": 10,
+          "unit": "gp"
+        },
+        "quantity": 1 // 5e-SRD_Classes.json (starting_equipment)
+      },
+      {
+        "name": "Javelin", // 5e-SRD_Classes.json (starting_equipment)
+        "equipment_category": "weapon", // 5e-SRD-Equipment.json (equipment_category.index)
+        "weapon_category": "Simple", // 5e-SRD-Equipment.json
+        "is_melee": true,
+        "is_ranged": true,
+        "range": { // 5e-SRD-Equipment.json
+          "normal": 30,
+          "long": 120
+        },
+        "damage": { // 5e-SRD-Equipment.json
+          "dice": "1D6",
+          "type": "piercing"
+        },
+        "properties": [
+          {
+            "name": "thrown", // 5e-SRD-Equipment.json
+            "desc": "This thing can be thrown" // 5e-SRD-Weapon-Properties.json
+          }
+        ],
+        "weight": 2, // 5e-SRD-Equipment.json
+        "cost": { // 5e-SRD-Equipment.json
+          "quantity": 5,
+          "unit": "sp"
+        },
+        "quantity": 4 // 5e-SRD_Classes.json (starting_equipment)
+      }
+    ],
+    "start_equipment_optional": [
+      {
+        "desc": "(a) a greataxe or (b) any martial melee weapon", // 5e-SRD-Classes.json
+        "choices": [
+          {
+            "name": "Greataxe", // 5e-SRD_Classes.json (starting_equipment)
+            "equipment_category": "weapon", // 5e-SRD-Equipment.json (equipment_category.index)
+            "weapon_category": "Martial", // 5e-SRD-Equipment.json
+            "is_melee": true,
+            "is_ranged": false,
+            "range": { // 5e-SRD-Equipment.json
+              "normal": 0,
+              "long": 0
+            },
+            "damage": { // 5e-SRD-Equipment.json
+              "dice": "1D12",
+              "type": "slashing"
+            },
+            "properties": [
+              {
+                "name": "heavy", // 5e-SRD-Equipment.json
+                "desc": "it's heavy" // 5e-SRD-Weapon-Properties.json
+              },
+              {
+                "name": "two-handed", // 5e-SRD-Equipment.json
+                "desc": "needs two hands" // 5e-SRD-Weapon-Properties.json
+              }
+            ],
+            "weight": 7, // 5e-SRD-Equipment.json
+            "cost": { // 5e-SRD-Equipment.json
+              "quantity": 30,
+              "unit": "gp"
+            },
+            "quantity": 1 // 5e-SRD_Classes.json (starting_equipment)
+          }
+        ]
+      }
+    ],
+    "features": [
+      {
+        "name": "Rage", // 5e-SRD-Features.json
+        "level_aquired": 1, // 5e-SRD-Features.json
+        "desc": "Get angry, hit things" // 5e-SRD-Features.json
+      }
+    ],
+    "subclasses": [
+      {
+        "name": "Berserker",
+        "features": [
+          {
+            "name": "Frenzy", // 5e-SRD-Features.json
+            "level_aquired": 3, // 5e-SRD-Features.json
+            "desc": "More hitting things" // 5e-SRD-Features.json
+          }
+        ]
+      }
+    ]
+  }
+}
