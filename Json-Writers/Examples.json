@@ -150,5 +150,63 @@
         ]
       }
     ]
-  }
+  },
+  
+  "Custom Race": {
+    "speed": 25, // 5e-SRD-Races.json
+    "ability_bonuses": [
+      {
+        "stat": "Constitution", // 5e-SRD-Races.json (ability_bonuses.ability_score.index)
+        "bonus": 2 // 5e-SRD-Races.json (ability_bonuses.bonus)
+      }
+    ],
+    "size": "Medium", // 5e-SRD-Races.json
+    "starting_proficiencies": [ // 5e-SRD-Races.json (starting_proficiencies.name)
+      "Battleaxes",
+      "Handaxes",
+      "Light Hammers",
+      "Warhammers"
+    ],
+    "starting_proficiency_options": {
+      "desc": "You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.", // 5e-SRD-Races.json
+      "choose": 1, // 5e-SRD-Races.json
+      "choices": [ // 5e-SRD-Races.json (starting_proficiency_options.from.options.item.name)
+        "Smith's Tools",
+        "Brewer's Supplies",
+        "Mason's Tools"
+      ]
+    },
+    "languages": [ // 5e-SRD-Races.json (languages.name)
+      "Common",
+      "Dwarvish"
+    ],
+    "traits": [ 
+      {
+        "name": "Darkvision", // 5e-SRD-Races.json
+        "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray." //5e-SRD-Traits.json
+      },
+      {
+        "name": "Dwarven Resilience", // 5e-SRD-Races.json
+        "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage."  // 5e-SRD-Traits.json
+      },
+    ],
+    "subraces": [ // The subrace structure is almost identical to the base race structure, just pulling from the subrace file instead of the race file and missing elements if they're unchanged from the original
+      {
+        "name": "Hill Dwarf", //5e-SRD-Subraces.json
+        "desc": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.", // 5e-SRD-Subraces.json
+    "ability_bonuses": [
+      {
+        "stat": "Wisdom", // 5e-SRD-Subraces.json (ability_bonuses.ability_score.index)
+        "bonus": 1 // 5e-SRD-Subraces.json (ability_bonuses.bonus)
+      }
+    ],
+    "starting_proficiencies": [], // Nothing here but same as the base race format
+    "languages": [], // Nothing here but same as the base race format
+    "racial_traits": [
+      {
+        "name": "Dwarven Toughness", // 5e-SRD-Subraces.json
+        "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level." // 5e-SRD-Traits.json
+      }
+    ],
+  },
 }
