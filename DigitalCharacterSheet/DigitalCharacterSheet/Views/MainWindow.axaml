@@ -8,191 +8,276 @@
         x:Class="DigitalCharacterSheet.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="DigitalCharacterSheet">
-            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*"
-                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <!-- Row 0 -->
-                <TextBlock Grid.Row="0" Grid.Column="0" Background="LightSeaGreen" Text="0,0"/>
-                <TextBlock Grid.Row="0" Grid.Column="1" Background="Gray"/>
-                <TextBlock Grid.Row="0" Grid.Column="2" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="0" Grid.Column="3" Background="Gray"/>
-                <TextBlock Grid.Row="0" Grid.Column="4" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="0" Grid.Column="5" Background="Gray"/>
-                <TextBlock Grid.Row="0" Grid.Column="6" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="0" Grid.Column="7" Background="Gray"/>
-                <TextBlock Grid.Row="0" Grid.Column="8" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="0" Grid.Column="9" Background="Gray"/>
-                <!-- Row 1 -->
-                <TextBlock Grid.Row="1" Grid.Column="0" Background="Gray"/>
-                <TextBlock Grid.Row="1" Grid.Column="1" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="1" Grid.Column="2" Background="Gray"/>
-                <TextBlock Grid.Row="1" Grid.Column="3" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="1" Grid.Column="4" Background="Gray"/>
-                <TextBlock Grid.Row="1" Grid.Column="5" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="1" Grid.Column="6" Background="Gray"/>
-                <TextBlock Grid.Row="1" Grid.Column="7" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="1" Grid.Column="8" Background="Gray"/>
-                <TextBlock Grid.Row="1" Grid.Column="9" Background="LightSeaGreen"/>
-                <!-- Row 2 -->
-                <TextBlock Grid.Row="2" Grid.Column="0" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="2" Grid.Column="1" Background="Gray"/>
-                <TextBlock Grid.Row="2" Grid.Column="2" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="2" Grid.Column="3" Background="Gray"/>
-                <TextBlock Grid.Row="2" Grid.Column="4" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="2" Grid.Column="5" Background="Gray"/>
-                <TextBlock Grid.Row="2" Grid.Column="6" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="2" Grid.Column="7" Background="Gray"/>
-                <TextBlock Grid.Row="2" Grid.Column="8" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="2" Grid.Column="9" Background="Gray"/>
-                <!-- Row 3 -->
-                <TextBlock Grid.Row="3" Grid.Column="0" Background="Gray"/>
-                <TextBlock Grid.Row="3" Grid.Column="1" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="3" Grid.Column="2" Background="Gray"/>
-                <TextBlock Grid.Row="3" Grid.Column="3" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="3" Grid.Column="4" Background="Gray"/>
-                <TextBlock Grid.Row="3" Grid.Column="5" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="3" Grid.Column="6" Background="Gray"/>
-                <TextBlock Grid.Row="3" Grid.Column="7" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="3" Grid.Column="8" Background="Gray"/>
-                <TextBlock Grid.Row="3" Grid.Column="9" Background="LightSeaGreen"/>
-                <!-- Row 4 -->
-                <TextBlock Grid.Row="4" Grid.Column="0" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="4" Grid.Column="1" Background="Gray"/>
-                <TextBlock Grid.Row="4" Grid.Column="2" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="4" Grid.Column="3" Background="Gray"/>
-                <TextBlock Grid.Row="4" Grid.Column="4" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="4" Grid.Column="5" Background="Gray"/>
-                <TextBlock Grid.Row="4" Grid.Column="6" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="4" Grid.Column="7" Background="Gray"/>
-                <TextBlock Grid.Row="4" Grid.Column="8" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="4" Grid.Column="9" Background="Gray"/>
-                <!-- Row 5 -->
-                <TextBlock Grid.Row="5" Grid.Column="0" Background="Gray"/>
-                <TextBlock Grid.Row="5" Grid.Column="1" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="5" Grid.Column="2" Background="Gray"/>
-                <TextBlock Grid.Row="5" Grid.Column="3" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="5" Grid.Column="4" Background="Gray"/>
-                <TextBlock Grid.Row="5" Grid.Column="5" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="5" Grid.Column="6" Background="Gray"/>
-                <TextBlock Grid.Row="5" Grid.Column="7" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="5" Grid.Column="8" Background="Gray"/>
-                <TextBlock Grid.Row="5" Grid.Column="9" Background="LightSeaGreen"/>
-                <!-- Row 6 -->
-                <TextBlock Grid.Row="6" Grid.Column="0" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="6" Grid.Column="1" Background="Gray"/>
-                <TextBlock Grid.Row="6" Grid.Column="2" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="6" Grid.Column="3" Background="Gray"/>
-                <TextBlock Grid.Row="6" Grid.Column="4" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="6" Grid.Column="5" Background="Gray"/>
-                <TextBlock Grid.Row="6" Grid.Column="6" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="6" Grid.Column="7" Background="Gray"/>
-                <TextBlock Grid.Row="6" Grid.Column="8" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="6" Grid.Column="9" Background="Gray"/>
-                <!-- Row 7 -->
-                <TextBlock Grid.Row="7" Grid.Column="0" Background="Gray"/>
-                <TextBlock Grid.Row="7" Grid.Column="1" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="7" Grid.Column="2" Background="Gray"/>
-                <TextBlock Grid.Row="7" Grid.Column="3" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="7" Grid.Column="4" Background="Gray"/>
-                <TextBlock Grid.Row="7" Grid.Column="5" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="7" Grid.Column="6" Background="Gray"/>
-                <TextBlock Grid.Row="7" Grid.Column="7" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="7" Grid.Column="8" Background="Gray"/>
-                <TextBlock Grid.Row="7" Grid.Column="9" Background="LightSeaGreen"/>
-                <!-- Row 8 -->
-                <TextBlock Grid.Row="8" Grid.Column="0" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="8" Grid.Column="1" Background="Gray"/>
-                <TextBlock Grid.Row="8" Grid.Column="2" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="8" Grid.Column="3" Background="Gray"/>
-                <TextBlock Grid.Row="8" Grid.Column="4" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="8" Grid.Column="5" Background="Gray"/>
-                <TextBlock Grid.Row="8" Grid.Column="6" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="8" Grid.Column="7" Background="Gray"/>
-                <TextBlock Grid.Row="8" Grid.Column="8" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="8" Grid.Column="9" Background="Gray"/>
-                <!-- Row 9 -->
-                <TextBlock Grid.Row="9" Grid.Column="0" Background="Gray"/>
-                <TextBlock Grid.Row="9" Grid.Column="1" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="9" Grid.Column="2" Background="Gray"/>
-                <TextBlock Grid.Row="9" Grid.Column="3" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="9" Grid.Column="4" Background="Gray"/>
-                <TextBlock Grid.Row="9" Grid.Column="5" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="9" Grid.Column="6" Background="Gray"/>
-                <TextBlock Grid.Row="9" Grid.Column="7" Background="LightSeaGreen"/>
-                <TextBlock Grid.Row="9" Grid.Column="8" Background="Gray"/>
-                <TextBlock Grid.Row="9" Grid.Column="9" Background="LightSeaGreen"/>
-                
-                
-                <StackPanel Orientation="Vertical"
-                            Grid.Column="0" Grid.ColumnSpan="2"
-                           Grid.Row="2" Grid.RowSpan="5"
-                            Background="Beige">
-                    <TextBlock Foreground="Black" TextAlignment="Center"
-                               TextDecorations="underline" FontSize="32"
-                               Margin="15"
-                               >Stats</TextBlock>
-                    
-                    <StackPanel Orientation="Horizontal"
-                          VerticalAlignment="Stretch" HorizontalAlignment="Center">
-                        
-                        <StackPanel Name="PhysicalStats" Orientation="Vertical"
-                                    VerticalAlignment="Stretch" HorizontalAlignment="Left"
-                                    Margin="10">
-                            <TextBlock Name="StrScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock>
-                            <TextBlock Name="StrMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock>
-                            <TextBlock Name="StrLabel" Foreground="Black" TextAlignment="Center"
-                                       FontSize="16"
-                                       Margin="0, 0, 0, 10"
-                            >STR</TextBlock>
-                    
-                    
-                            <TextBlock Name="DexScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock>
-                            <TextBlock Name="DexMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock>
-                            <TextBlock Name="DexLabel" Foreground="Black" TextAlignment="Center"
-                                       FontSize="16"
-                                       Margin="0, 0, 0, 10"
-                            >DEX</TextBlock>
-                    
-                    
-                            <TextBlock Name="ConScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock>
-                            <TextBlock Name="ConMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock>
-                            <TextBlock Name="ConLabel" Foreground="Black" TextAlignment="Center"
-                                       FontSize="16"
-                                       Margin="0, 0, 0, 10"
-                            >CON</TextBlock>
+
+    <!-- The comments are structured as item a|item b|item c.
+            If the StackPanel is vertical, item a is the topmost.
+            If the StackPanel is horizontal, item a is the leftmost. -->
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <!-- StackPanel|StackPanel -->
+        <StackPanel>
+            <!-- StackPanel|StackPanel|StackPanel -->
+            <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                <!-- StackPanel|StackPanel -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <!-- Image|StackPanel|StackPanel -->
+                    <Image></Image>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <!-- StackPanel|StackPanel -->
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                            <!-- Name|Class|Race|StackPanel -->
+                            <TextBlock Name="Name"></TextBlock>
+                            <TextBlock Name="Class"></TextBlock>
+                            <TextBlock Name="Race"></TextBlock>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                <!-- Height|Weight -->
+                                <TextBlock Name="Height"></TextBlock>
+                                <TextBlock Name="Weight"></TextBlock>
+                            </StackPanel>
                         </StackPanel>
-                        
-                        <StackPanel Name="MentalStats" Orientation="Vertical"
-                                    VerticalAlignment="Stretch" HorizontalAlignment="Right"
-                                    Margin="10">
-                            <TextBlock Name="IntScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock>
-                            <TextBlock Name="IntMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock>
-                            <TextBlock Name="IntLabel" Foreground="Black" TextAlignment="Center"
-                                       FontSize="16"
-                                       Margin="0, 0, 0, 10"
-                            >INT</TextBlock>
-                    
-                    
-                            <TextBlock Name="WisScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock>
-                            <TextBlock Name="WisMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock>
-                            <TextBlock Name="WisLabel" Foreground="Black" TextAlignment="Center"
-                                       FontSize="16"
-                                       Margin="0, 0, 0, 10"
-                            >WIS</TextBlock>
-                    
-                    
-                            <TextBlock Name="ChaScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock>
-                            <TextBlock Name="ChaMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock>
-                            <TextBlock Name="ChaLabel" Foreground="Black" TextAlignment="Center"
-                                       FontSize="16"
-                                       Margin="0, 0, 0, 10"
-                            >CHA</TextBlock>
+                        <StackPanel>
+                            <!-- XP|LVL|Alignment|Size -->
+                            <TextBlock Name="Xp"></TextBlock>
+                            <TextBlock Name="Level"></TextBlock>
+                            <TextBlock Name="Alignment"></TextBlock>
+                            <TextBlock Name="Size"></TextBlock>
                         </StackPanel>
-                        
                     </StackPanel>
-                    
-                    
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                        <!-- Current HP|Max HP|Temporary HP|StackPanel|Armor Class|Speed -->
+                        <TextBlock Name="CurrentHp"></TextBlock>
+                        <TextBlock Name="MaxHp"></TextBlock>
+                        <TextBlock Name="TemporaryHp"></TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                            <!-- Initiative|Hit Dice -->
+                            <TextBlock Name="Initiative"></TextBlock>
+                            <TextBlock Name="HitDice"></TextBlock>
+                        </StackPanel>
+                        <TextBlock Name="ArmorClass"></TextBlock>
+                        <TextBlock Name="Speed"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <!-- StackPanel|StackPanel|Spell Slots Remaining/Ability Charges -->
+                        <StackPanel Name="Stats" Orientation="Vertical" VerticalAlignment="Stretch"></StackPanel>
+                        <StackPanel Name="Skills" Orientation="Vertical" VerticalAlignment="Stretch"></StackPanel>
+                        <ScrollViewer Name="SpellSlotsAbilityCharges"></ScrollViewer>
+                    </StackPanel>
                 </StackPanel>
-                
-                
-            </Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <!-- AttacksSpells|StackPanel -->
+                    <ScrollViewer Name="AttacksSpells"></ScrollViewer>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                        <!-- StackPanel|BackStory -->
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                            <TextBlock Name="PersonalityTraits"></TextBlock>
+                            <TextBlock Name="Ideals"></TextBlock>
+                            <TextBlock Name="Bonds"></TextBlock>
+                            <TextBlock Name="Flaws"></TextBlock>
+                        </StackPanel>
+                        <TextBlock Name="Backstory"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <!-- StackPanel|Proficiencies|Money|Equipment -->
+            <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                <!-- Saving Throws|Languages -->
+                <ScrollViewer Name="Saving Throws"></ScrollViewer>
+                <ScrollViewer Name="Languages"></ScrollViewer>
+            </StackPanel>
+            <ScrollViewer Name="Proficiencies"></ScrollViewer>
+            <ScrollViewer Name="Money"></ScrollViewer>
+            <ScrollViewer Name="Equipment"></ScrollViewer>
+        </StackPanel>
+    </StackPanel>
+    
+    <!-- <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*" -->
+    <!--        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"> -->
+    <!--     ~1~ Row 0 @1@ -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="0" Background="LightSeaGreen" Text="0,0"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="1" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="2" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="3" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="4" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="5" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="6" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="7" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="8" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="0" Grid.Column="9" Background="Gray"/> -->
+    <!--     ~1~ Row 1 @1@ -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="0" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="1" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="2" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="3" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="4" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="5" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="6" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="7" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="8" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="1" Grid.Column="9" Background="LightSeaGreen"/> -->
+    <!--     ~1~ Row 2 @1@ -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="0" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="1" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="2" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="3" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="4" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="5" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="6" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="7" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="8" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="2" Grid.Column="9" Background="Gray"/> -->
+    <!--     ~1~ Row 3 @1@ -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="0" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="1" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="2" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="3" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="4" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="5" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="6" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="7" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="8" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="3" Grid.Column="9" Background="LightSeaGreen"/> -->
+    <!--     ~1~ Row 4 @1@ -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="0" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="1" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="2" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="3" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="4" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="5" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="6" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="7" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="8" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="4" Grid.Column="9" Background="Gray"/> -->
+    <!--     ~1~ Row 5 @1@ -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="0" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="1" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="2" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="3" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="4" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="5" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="6" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="7" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="8" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="5" Grid.Column="9" Background="LightSeaGreen"/> -->
+    <!--     ~1~ Row 6 @1@ -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="0" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="1" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="2" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="3" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="4" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="5" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="6" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="7" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="8" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="6" Grid.Column="9" Background="Gray"/> -->
+    <!--     ~1~ Row 7 @1@ -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="0" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="1" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="2" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="3" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="4" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="5" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="6" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="7" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="8" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="7" Grid.Column="9" Background="LightSeaGreen"/> -->
+    <!--     ~1~ Row 8 @1@ -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="0" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="1" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="2" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="3" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="4" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="5" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="6" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="7" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="8" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="8" Grid.Column="9" Background="Gray"/> -->
+    <!--     ~1~ Row 9 @1@ -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="0" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="1" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="2" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="3" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="4" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="5" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="6" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="7" Background="LightSeaGreen"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="8" Background="Gray"/> -->
+    <!--     <TextBlock Grid.Row="9" Grid.Column="9" Background="LightSeaGreen"/> -->
+    <!--      -->
+    <!--      -->
+    <!--     <StackPanel Orientation="Vertical" -->
+    <!--                 Grid.Column="0" Grid.ColumnSpan="2" -->
+    <!--                Grid.Row="2" Grid.RowSpan="5" -->
+    <!--                 Background="Beige"> -->
+    <!--         <TextBlock Foreground="Black" TextAlignment="Center" -->
+    <!--                    TextDecorations="underline" FontSize="32" -->
+    <!--                    Margin="15" -->
+    <!--                    >Stats</TextBlock> -->
+    <!--          -->
+    <!--         <StackPanel Orientation="Horizontal" -->
+    <!--               VerticalAlignment="Stretch" HorizontalAlignment="Center"> -->
+    <!--              -->
+    <!--             <StackPanel Name="PhysicalStats" Orientation="Vertical" -->
+    <!--                         VerticalAlignment="Stretch" HorizontalAlignment="Left" -->
+    <!--                         Margin="10"> -->
+    <!--                 <TextBlock Name="StrScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock> -->
+    <!--                 <TextBlock Name="StrMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock> -->
+    <!--                 <TextBlock Name="StrLabel" Foreground="Black" TextAlignment="Center" -->
+    <!--                            FontSize="16" -->
+    <!--                            Margin="0, 0, 0, 10" -->
+    <!--                 >STR</TextBlock> -->
+    <!--          -->
+    <!--          -->
+    <!--                 <TextBlock Name="DexScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock> -->
+    <!--                 <TextBlock Name="DexMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock> -->
+    <!--                 <TextBlock Name="DexLabel" Foreground="Black" TextAlignment="Center" -->
+    <!--                            FontSize="16" -->
+    <!--                            Margin="0, 0, 0, 10" -->
+    <!--                 >DEX</TextBlock> -->
+    <!--          -->
+    <!--          -->
+    <!--                 <TextBlock Name="ConScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock> -->
+    <!--                 <TextBlock Name="ConMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock> -->
+    <!--                 <TextBlock Name="ConLabel" Foreground="Black" TextAlignment="Center" -->
+    <!--                            FontSize="16" -->
+    <!--                            Margin="0, 0, 0, 10" -->
+    <!--                 >CON</TextBlock> -->
+    <!--             </StackPanel> -->
+    <!--              -->
+    <!--             <StackPanel Name="MentalStats" Orientation="Vertical" -->
+    <!--                         VerticalAlignment="Stretch" HorizontalAlignment="Right" -->
+    <!--                         Margin="10"> -->
+    <!--                 <TextBlock Name="IntScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock> -->
+    <!--                 <TextBlock Name="IntMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock> -->
+    <!--                 <TextBlock Name="IntLabel" Foreground="Black" TextAlignment="Center" -->
+    <!--                            FontSize="16" -->
+    <!--                            Margin="0, 0, 0, 10" -->
+    <!--                 >INT</TextBlock> -->
+    <!--          -->
+    <!--          -->
+    <!--                 <TextBlock Name="WisScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock> -->
+    <!--                 <TextBlock Name="WisMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock> -->
+    <!--                 <TextBlock Name="WisLabel" Foreground="Black" TextAlignment="Center" -->
+    <!--                            FontSize="16" -->
+    <!--                            Margin="0, 0, 0, 10" -->
+    <!--                 >WIS</TextBlock> -->
+    <!--          -->
+    <!--          -->
+    <!--                 <TextBlock Name="ChaScore" Foreground="Black" TextAlignment="Center" FontSize="24">10</TextBlock> -->
+    <!--                 <TextBlock Name="ChaMod" Foreground="Black" TextAlignment="Center" FontSize="18">+0</TextBlock> -->
+    <!--                 <TextBlock Name="ChaLabel" Foreground="Black" TextAlignment="Center" -->
+    <!--                            FontSize="16" -->
+    <!--                            Margin="0, 0, 0, 10" -->
+    <!--                 >CHA</TextBlock> -->
+    <!--             </StackPanel> -->
+    <!--              -->
+    <!--         </StackPanel> -->
+    <!--          -->
+    <!--          -->
+    <!--     </StackPanel> -->
+    <!--      -->
+    <!--      -->
+    <!-- </Grid> -->
+    
+    
 </Window>
