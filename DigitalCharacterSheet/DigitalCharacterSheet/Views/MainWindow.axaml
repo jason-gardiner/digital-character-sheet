@@ -6,8 +6,14 @@
         xmlns:views="clr-namespace:DigitalCharacterSheet.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DigitalCharacterSheet.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="DigitalCharacterSheet">
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
 
     <!-- The comments are structured as item a|item b|item c.
             If the StackPanel is vertical, item a is the topmost.
