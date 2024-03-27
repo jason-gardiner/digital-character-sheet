@@ -14,6 +14,8 @@ public class Character
       Race = race;
       CharacterClass = charClass;
    }
+   
+#region MoveToDifferentClassLater
    public string Name { set; get; }
 
    public int Level { set; get; }
@@ -40,6 +42,8 @@ public class Character
       }
       get => _characterClass;
    }
+   
+#endregion
    
    public CharacterStatistics CharacterStats;
 }
