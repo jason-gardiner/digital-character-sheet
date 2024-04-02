@@ -29,7 +29,9 @@
                         <Border BorderThickness="2" BorderBrush="Black">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                 <!-- Image|Appearance/Game Stats|Battle Stats : DATA : Top Left-->
-                                <Image></Image>
+                                <Button Name="ChangeCharacterImage">
+                                    <Image Name="CharacterImage" Source="../Assets/default_character_image.png" Width="100" Height="100"/>
+                                </Button>
                                 <Border BorderThickness="2" BorderBrush="Black">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                         <!-- Appearance|Game Stats : DATA : Top Left -->
