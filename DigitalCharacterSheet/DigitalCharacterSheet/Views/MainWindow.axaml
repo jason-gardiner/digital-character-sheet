@@ -29,21 +29,38 @@
                         <Border BorderThickness="2" BorderBrush="Black">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                 <!-- Image|Appearance/Game Stats|Battle Stats : DATA : Top Left-->
-                                <Image></Image>
+                                <Button Name="ChangeCharacterImage">
+                                    <Image Name="CharacterImage" Source="../Assets/default_character_image.png"
+                                           Width="100" Height="100"/>
+                                </Button>
                                 <Border BorderThickness="2" BorderBrush="Black">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                         <!-- Appearance|Game Stats : DATA : Top Left -->
                                         <Border BorderThickness="2" BorderBrush="Black">
                                             <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
                                                 <!-- Name|Class|Race|Height/Weight : DATA : Top Left -->
-                                                <TextBlock Name="Name"></TextBlock>
-                                                <TextBlock Name="Class"></TextBlock>
-                                                <TextBlock Name="Race"></TextBlock>
+                                                <Grid ColumnDefinitions="50, 180" RowDefinitions="*, *, *" Margin="2">
+                                                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="NameLabel" VerticalAlignment="Center" Foreground="Black">Name:</TextBlock>
+                                                    <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ClassLabel" VerticalAlignment="Center" Foreground="Black">Class:</TextBlock>
+                                                    <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="RaceLabel" VerticalAlignment="Center" Foreground="Black">Race:</TextBlock>
+                                                    <TextBox Grid.Row="0" Grid.Column="1" Name="Name" Width="180" Background="Navy"
+                                                              Foreground="LightGray" Watermark="Name" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="1" Grid.Column="1" Name="Class" Width="180" Background="Navy"
+                                                              Foreground="LightGray" Watermark="Class" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="2" Grid.Column="1" Name="Race" Width="180" Background="Navy"
+                                                              Foreground="LightGray" Watermark="Race" Margin="2"></TextBox>
+                                                </Grid>
                                                 <Border BorderThickness="2" BorderBrush="Black">
                                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                                         <!-- Height|Weight : DATA : Top Left -->
-                                                        <TextBlock Name="Height"></TextBlock>
-                                                        <TextBlock Name="Weight"></TextBlock>
+                                                        <Grid ColumnDefinitions="50, 65, 50, 65" RowDefinitions="*" Margin="2">
+                                                            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="HeightLabel" VerticalAlignment="Center" Foreground="Black">Height:</TextBlock>
+                                                            <TextBox Grid.Row="0" Grid.Column="1" Name="Height" Width="50" Background="Navy"
+                                                                     Foreground="LightGray" Watermark="Height" Margin="2"></TextBox>
+                                                            <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="WeightLabel" VerticalAlignment="Center" Foreground="Black">Weight:</TextBlock>
+                                                            <TextBox Grid.Row="0" Grid.Column="3" Name="Weight" Width="50" Background="Navy"
+                                                                     Foreground="LightGray" Watermark="Weight" Margin="2"></TextBox>
+                                                        </Grid>
                                                     </StackPanel>
                                                 </Border>
                                             </StackPanel>
@@ -51,10 +68,20 @@
                                         <Border BorderThickness="2" BorderBrush="Black">
                                             <StackPanel>
                                                 <!-- XP|LVL|Alignment|Size : DATA : Top Left -->
-                                                <TextBlock Name="Xp"></TextBlock>
-                                                <TextBlock Name="Level"></TextBlock>
-                                                <TextBlock Name="Alignment"></TextBlock>
-                                                <TextBlock Name="Size"></TextBlock>
+                                                <Grid ColumnDefinitions="50, 95" RowDefinitions="*, *, *, *" Margin="2">
+                                                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="XpLabel" VerticalAlignment="Center" Foreground="Black">XP:</TextBlock>
+                                                    <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="LevelLabel" VerticalAlignment="Center" Foreground="Black">LVL:</TextBlock>
+                                                    <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="EthicsLabel" VerticalAlignment="Center" Foreground="Black">Ethics:</TextBlock>
+                                                    <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Name="SizeLabel" VerticalAlignment="Center" Foreground="Black">Size:</TextBlock>
+                                                    <TextBox Grid.Row="0" Grid.Column="1" Name="Xp" Width="80" Background="Navy"
+                                                             Foreground="LightGray" Watermark="XP" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="1" Grid.Column="1" Name="Level" Width="80" Background="Navy"
+                                                             Foreground="LightGray" Watermark="Level" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="2" Grid.Column="1" Name="Ethics" Width="80" Background="Navy"
+                                                             Foreground="LightGray" Watermark="Ethics" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="3" Grid.Column="1" Name="Size" Width="80" Background="Navy"
+                                                             Foreground="LightGray" Watermark="Size" Margin="2"></TextBox>
+                                                </Grid>
                                             </StackPanel>
                                         </Border>
                                     </StackPanel>
@@ -62,18 +89,50 @@
                                 <Border BorderThickness="2" BorderBrush="Black">
                                     <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
                                         <!-- Current HP|Max HP|Temporary HP|StackPanel|Armor Class|Speed : DATA : Top Middle-->
-                                        <TextBlock Name="CurrentHp"></TextBlock>
-                                        <TextBlock Name="MaxHp"></TextBlock>
-                                        <TextBlock Name="TemporaryHp"></TextBlock>
-                                        <Border BorderThickness="2" BorderBrush="Black">
-                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                                <!-- Initiative|Hit Dice : DATA : Top Middle -->
-                                                <TextBlock Name="Initiative"></TextBlock>
-                                                <TextBlock Name="HitDice"></TextBlock>
-                                            </StackPanel>
-                                        </Border>
-                                        <TextBlock Name="ArmorClass"></TextBlock>
-                                        <TextBlock Name="Speed"></TextBlock>
+                                        
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="2">
+                                            <TextBlock HorizontalAlignment="Right" Name="CurrentHpLabel" VerticalAlignment="Center" Foreground="Black">Current HP:</TextBlock>
+                                            <TextBox Name="CurrentHp" Width="85" Background="Navy"
+                                                     Foreground="LightGray" Watermark="Current" Margin="2"></TextBox>
+                                        </StackPanel>
+                                        
+                                        
+                                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto" RowDefinitions="*, *, *" Margin="2">
+                                            
+                                            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="MaxHpLabel" VerticalAlignment="Center" Foreground="Black">Max HP:</TextBlock>
+                                            <TextBox Grid.Row="0" Grid.Column="1" Name="MaxHp" Width="65" Background="Navy"
+                                                     Foreground="LightGray" Watermark="Max" Margin="2"></TextBox>
+                                            <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="TemporaryHpLabel" VerticalAlignment="Center" Foreground="Black">Temp HP:</TextBlock>
+                                            <TextBox Grid.Row="0" Grid.Column="3" Name="TemporaryHp" Width="65" Background="Navy"
+                                                     Foreground="LightGray" Watermark="Temp" Margin="2"></TextBox>
+                                            
+                                            <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ArmorClassLabel" VerticalAlignment="Center" Foreground="Black">AC:</TextBlock>
+                                            <TextBox Grid.Row="1" Grid.Column="1" Name="ArmorClass" Width="65" Background="Navy"
+                                                     Foreground="LightGray" Watermark="AC" Margin="2"></TextBox>
+                                            <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Name="HitDiceLabel" VerticalAlignment="Center" Foreground="Black">Hit Dice:</TextBlock>
+                                            <TextBox Grid.Row="1" Grid.Column="3" Name="HitDiceHp" Width="65" Background="Navy"
+                                                     Foreground="LightGray" Watermark="Hit Die" Margin="2"></TextBox>
+                                            
+                                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="InitiativeLabel" VerticalAlignment="Center" Foreground="Black">Initiative:</TextBlock>
+                                            <TextBox Grid.Row="2" Grid.Column="1" Name="InitiativeHp" Width="65" Background="Navy"
+                                                     Foreground="LightGray" Watermark="Initiative" Margin="2"></TextBox>
+                                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" Name="SpeedLabel" VerticalAlignment="Center" Foreground="Black">Speed:</TextBlock>
+                                            <TextBox Grid.Row="2" Grid.Column="3" Name="Speed" Width="65" Background="Navy"
+                                                     Foreground="LightGray" Watermark="Speed" Margin="2"></TextBox>
+                                        </Grid>
+                                        
+                                        <!-- <TextBlock Name="CurrentHp"></TextBlock> -->
+                                        <!-- <TextBlock Name="MaxHp"></TextBlock> -->
+                                        <!-- <TextBlock Name="TemporaryHp"></TextBlock> -->
+                                        <!-- <Border BorderThickness="2" BorderBrush="Black"> -->
+                                        <!--     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"> -->
+                                        <!--         ~1~ Initiative|Hit Dice : DATA : Top Middle @1@ -->
+                                        <!--         <TextBlock Name="Initiative"></TextBlock> -->
+                                        <!--         <TextBlock Name="HitDice"></TextBlock> -->
+                                        <!--     </StackPanel> -->
+                                        <!-- </Border> -->
+                                        <!-- <TextBlock Name="ArmorClass"></TextBlock> -->
+                                        <!-- <TextBlock Name="Speed"></TextBlock> -->
                                     </StackPanel>
                                 </Border>
                             </StackPanel>
@@ -82,8 +141,35 @@
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                 <!-- Ability Scores|Skills|Spell Slots Remaining/Ability Charges : DATA : Middle Left -->
                                 <Border BorderThickness="2" BorderBrush="Black">
-                                    <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch">
+                                    <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch" Background="Gray">
+                                        <TextBlock HorizontalAlignment="Center">Str</TextBlock>
+                                        <TextBox Name="Str" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="StrMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
+                                        
+                                        <TextBlock HorizontalAlignment="Center">Dex</TextBlock>
+                                        <TextBox Name="Dex" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="DexMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
 
+                                        <TextBlock HorizontalAlignment="Center">Con</TextBlock>
+                                        <TextBox Name="Con" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="ConMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
+
+                                        <TextBlock HorizontalAlignment="Center">Int</TextBlock>
+                                        <TextBox Name="Int" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="IntMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
+
+                                        <TextBlock HorizontalAlignment="Center">Wis</TextBlock>
+                                        <TextBox Name="Wis" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="WisMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
+
+                                        <TextBlock HorizontalAlignment="Center">Cha</TextBlock>
+                                        <TextBox Name="Cha" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="ChaMod" HorizontalAlignment="Center">0</TextBlock>
                                     </StackPanel>
                                 </Border>
                                 <StackPanel Name="Skills" Orientation="Vertical" VerticalAlignment="Stretch"
