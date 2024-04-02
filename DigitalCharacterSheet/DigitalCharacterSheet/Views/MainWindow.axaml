@@ -33,30 +33,24 @@
                                 <Border BorderThickness="2" BorderBrush="Black">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                         <!-- Appearance|Game Stats : DATA : Top Left -->
-                                        <Border BorderThickness="2" BorderBrush="Black">
-                                            <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-                                                <!-- Name|Class|Race|Height/Weight : DATA : Top Left -->
-                                                <TextBlock Name="Name"></TextBlock>
-                                                <TextBlock Name="Class"></TextBlock>
-                                                <TextBlock Name="Race"></TextBlock>
-                                                <Border BorderThickness="2" BorderBrush="Black">
-                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                                        <!-- Height|Weight : DATA : Top Left -->
-                                                        <TextBlock Name="Height"></TextBlock>
-                                                        <TextBlock Name="Weight"></TextBlock>
-                                                    </StackPanel>
-                                                </Border>
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                                            <!-- Name|Class|Race|Height/Weight : DATA : Top Left -->
+                                            <TextBlock Name="Name"></TextBlock>
+                                            <TextBlock Name="Class"></TextBlock>
+                                            <TextBlock Name="Race"></TextBlock>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                <!-- Height|Weight : DATA : Top Left -->
+                                                <TextBlock Name="Height"></TextBlock>
+                                                <TextBlock Name="Weight"></TextBlock>
                                             </StackPanel>
-                                        </Border>
-                                        <Border BorderThickness="2" BorderBrush="Black">
-                                            <StackPanel>
-                                                <!-- XP|LVL|Alignment|Size : DATA : Top Left -->
-                                                <TextBlock Name="Xp"></TextBlock>
-                                                <TextBlock Name="Level"></TextBlock>
-                                                <TextBlock Name="Alignment"></TextBlock>
-                                                <TextBlock Name="Size"></TextBlock>
-                                            </StackPanel>
-                                        </Border>
+                                        </StackPanel>
+                                        <StackPanel>
+                                            <!-- XP|LVL|Alignment|Size : DATA : Top Left -->
+                                            <TextBlock Name="Xp"></TextBlock>
+                                            <TextBlock Name="Level"></TextBlock>
+                                            <TextBlock Name="Alignment"></TextBlock>
+                                            <TextBlock Name="Size"></TextBlock>
+                                        </StackPanel>
                                     </StackPanel>
                                 </Border>
                                 <Border BorderThickness="2" BorderBrush="Black">
@@ -82,8 +76,35 @@
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                 <!-- Ability Scores|Skills|Spell Slots Remaining/Ability Charges : DATA : Middle Left -->
                                 <Border BorderThickness="2" BorderBrush="Black">
-                                    <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch">
+                                    <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch" Background="Gray">
+                                        <TextBlock HorizontalAlignment="Center">Str</TextBlock>
+                                        <TextBox Name="Str" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="StrMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
+                                        
+                                        <TextBlock HorizontalAlignment="Center">Dex</TextBlock>
+                                        <TextBox Name="Dex" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="DexMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
 
+                                        <TextBlock HorizontalAlignment="Center">Con</TextBlock>
+                                        <TextBox Name="Con" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="ConMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
+
+                                        <TextBlock HorizontalAlignment="Center">Int</TextBlock>
+                                        <TextBox Name="Int" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="IntMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
+
+                                        <TextBlock HorizontalAlignment="Center">Wis</TextBlock>
+                                        <TextBox Name="Wis" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="WisMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <Rectangle Fill="Black" Height="2"></Rectangle>
+
+                                        <TextBlock HorizontalAlignment="Center">Cha</TextBlock>
+                                        <TextBox Name="Cha" TextAlignment="Center">10</TextBox>
+                                        <TextBlock Name="ChaMod" HorizontalAlignment="Center">0</TextBlock>
                                     </StackPanel>
                                 </Border>
                                 <StackPanel Name="Skills" Orientation="Vertical" VerticalAlignment="Stretch"
