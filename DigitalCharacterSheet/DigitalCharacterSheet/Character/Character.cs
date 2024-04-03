@@ -8,17 +8,21 @@ using DigitalCharacterSheet.character;
 namespace DigitalCharacterSheet.Character;
 public class Character
 {
-   Character(string name = "", string race = "", Tuple<string, int>[] charClass = null)
+   public Character(string name, string race = "", Tuple<string, int>[] charClass = null)
    {
       Name = name;
       Race = race;
       CharacterClass = charClass;
    }
-   
-#region MoveToDifferentClassLater
+
+   public Character()
+   {
+   }
+
+   #region MoveToDifferentClassLater
    public string Name { set; get; }
 
-   public int Level { set; get; }
+   public int Level { private set; get; }
    public void SetLevel()
    {
       Level = 0;
@@ -45,5 +49,5 @@ public class Character
    
 #endregion
    
-   public CharacterStatistics CharacterStats;
+   public CharacterStatistics CharacterStats = new();
 }

@@ -4,9 +4,9 @@ namespace DigitalCharacterSheet.character;
 
 public class CharacterStatistics
 {
-    public struct StatsArray
+    public struct BackingStatistics
     {
-        public StatsArray(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        public BackingStatistics(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
         {
             Strength = strength;
             Dexterity = dexterity;
@@ -16,51 +16,15 @@ public class CharacterStatistics
             Charisma = charisma;
         }
 
-        public int Strength
-        {
-            get => _strength;
-            set => _strength = VerifyStat(value);
-        }
-
-        public int Dexterity
-        {
-            get => _dexterity;
-            set => _dexterity = VerifyStat(value);
-        }
-
-        public int Constitution
-        {
-            get => _constitution;
-            set => _constitution = VerifyStat(value);
-        }
-
-        public int Intelligence
-        {
-            get => _intelligence;
-            set => _intelligence = VerifyStat(value);
-        }
-
-        public int Wisdom
-        {
-            get => _wisdom;
-            set => _wisdom = VerifyStat(value);
-        }
-        
-        public int Charisma
-        {
-            get => _charisma;
-            set => _charisma = VerifyStat(value);
-        }
-
-        private int _strength;
-        private int _dexterity;
-        private int _constitution;
-        private int _intelligence;
-        private int _wisdom;
-        private int _charisma;
+        internal int Strength = 10;
+        internal int Dexterity = 10;
+        internal int Constitution = 10;
+        internal int Intelligence = 10;
+        internal int Wisdom = 10;
+        internal int Charisma = 10;
 
 
-        private static int VerifyStat(int stat)
+        public static int VerifyStat(int stat)
         {
             return stat switch
             {
@@ -70,18 +34,59 @@ public class CharacterStatistics
             };
         }
     };
+    
+    public int Strength
+    {
+        get => _statsArray.Strength;
+        set => _statsArray.Strength = BackingStatistics.VerifyStat(value);
+    }
 
-    private StatsArray _statsArray;
+    public int Dexterity
+    {
+        get => _statsArray.Dexterity;
+        set => _statsArray.Dexterity = BackingStatistics.VerifyStat(value);
+    }
 
-    public CharacterStatistics(StatsArray statsArray)
+    public int Constitution
+    {
+        get => _statsArray.Constitution;
+        set => _statsArray.Constitution = BackingStatistics.VerifyStat(value);
+    }
+
+    public int Intelligence
+    {
+        get => _statsArray.Intelligence;
+        set => _statsArray.Intelligence = BackingStatistics.VerifyStat(value);
+    }
+
+    public int Wisdom
+    {
+        get => _statsArray.Wisdom;
+        set => _statsArray.Wisdom = BackingStatistics.VerifyStat(value);
+    }
+        
+    public int Charisma
+    {
+        get => _statsArray.Charisma;
+        set => _statsArray.Charisma = BackingStatistics.VerifyStat(value);
+    }
+
+    private BackingStatistics _statsArray;
+
+    public CharacterStatistics(BackingStatistics statsArray)
     {
         _statsArray = statsArray;
     }
 
-    public int StrengthModifier => (int)MathF.Floor((_statsArray.Strength - 10) / 2f);
-    public int DexterityModifier => (int)MathF.Floor((_statsArray.Dexterity - 10) / 2f);
-    public int ConstitutionModifier => (int)MathF.Floor((_statsArray.Constitution - 10) / 2f);
-    public int IntelligenceModifier => (int)MathF.Floor((_statsArray.Intelligence - 10) / 2f);
-    public int WisdomModifier => (int)MathF.Floor((_statsArray.Wisdom - 10) / 2f);
-    public int CharismaModifier => (int)MathF.Floor((_statsArray.Charisma- 10) / 2f);
+    public CharacterStatistics()
+    {
+        _statsArray = new BackingStatistics(10, 10, 10, 10, 10, 10);
+    }
+
+    public int StrengthModifier => (int)MathF.Floor((Strength - 10) / 2f);
+    public int DexterityModifier => (int)MathF.Floor((Dexterity - 10) / 2f);
+    public int ConstitutionModifier => (int)MathF.Floor((Constitution - 10) / 2f);
+    public int IntelligenceModifier => (int)MathF.Floor((Intelligence - 10) / 2f);
+    public int WisdomModifier => (int)MathF.Floor((Wisdom - 10) / 2f);
+    public int CharismaModifier => (int)MathF.Floor((Charisma- 10) / 2f);
 }
