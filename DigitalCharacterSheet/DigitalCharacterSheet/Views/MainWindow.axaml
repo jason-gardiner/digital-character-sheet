@@ -44,11 +44,11 @@
                                                     <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ClassLabel" VerticalAlignment="Center" Foreground="Black">Class:</TextBlock>
                                                     <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="RaceLabel" VerticalAlignment="Center" Foreground="Black">Race:</TextBlock>
                                                     <TextBox Grid.Row="0" Grid.Column="1" Name="Name" Width="180" Background="Navy"
-                                                              Foreground="LightGray" Watermark="Name" Margin="2"></TextBox>
+                                                              Foreground="LightGray" Watermark="Name..." Margin="2"></TextBox>
                                                     <TextBox Grid.Row="1" Grid.Column="1" Name="Class" Width="180" Background="Navy"
-                                                              Foreground="LightGray" Watermark="Class" Margin="2"></TextBox>
+                                                              Foreground="LightGray" Watermark="Class..." Margin="2"></TextBox>
                                                     <TextBox Grid.Row="2" Grid.Column="1" Name="Race" Width="180" Background="Navy"
-                                                              Foreground="LightGray" Watermark="Race" Margin="2"></TextBox>
+                                                              Foreground="LightGray" Watermark="Race..." Margin="2"></TextBox>
                                                 </Grid>
                                                 <Border BorderThickness="2" BorderBrush="Black">
                                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
@@ -56,10 +56,10 @@
                                                         <Grid ColumnDefinitions="50, 65, 50, 65" RowDefinitions="*" Margin="2">
                                                             <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="HeightLabel" VerticalAlignment="Center" Foreground="Black">Height:</TextBlock>
                                                             <TextBox Grid.Row="0" Grid.Column="1" Name="Height" Width="50" Background="Navy"
-                                                                     Foreground="LightGray" Watermark="Height" Margin="2"></TextBox>
+                                                                     Foreground="LightGray" Margin="2"></TextBox>
                                                             <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="WeightLabel" VerticalAlignment="Center" Foreground="Black">Weight:</TextBlock>
                                                             <TextBox Grid.Row="0" Grid.Column="3" Name="Weight" Width="50" Background="Navy"
-                                                                     Foreground="LightGray" Watermark="Weight" Margin="2"></TextBox>
+                                                                     Foreground="LightGray" Margin="2"></TextBox>
                                                         </Grid>
                                                     </StackPanel>
                                                 </Border>
@@ -96,43 +96,29 @@
                                                      Foreground="LightGray" Watermark="Current" Margin="2"></TextBox>
                                         </StackPanel>
                                         
-                                        
                                         <Grid ColumnDefinitions="Auto, Auto, Auto, Auto" RowDefinitions="*, *, *" Margin="2">
                                             
                                             <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="MaxHpLabel" VerticalAlignment="Center" Foreground="Black">Max HP:</TextBlock>
                                             <TextBox Grid.Row="0" Grid.Column="1" Name="MaxHp" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Max" Margin="2"></TextBox>
+                                                     Foreground="LightGray" Margin="2"></TextBox>
                                             <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="TemporaryHpLabel" VerticalAlignment="Center" Foreground="Black">Temp HP:</TextBlock>
                                             <TextBox Grid.Row="0" Grid.Column="3" Name="TemporaryHp" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Temp" Margin="2"></TextBox>
+                                                     Foreground="LightGray" Margin="2"></TextBox>
                                             
                                             <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ArmorClassLabel" VerticalAlignment="Center" Foreground="Black">AC:</TextBlock>
                                             <TextBox Grid.Row="1" Grid.Column="1" Name="ArmorClass" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="AC" Margin="2"></TextBox>
+                                                     Foreground="LightGray" Margin="2"></TextBox>
                                             <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Name="HitDiceLabel" VerticalAlignment="Center" Foreground="Black">Hit Dice:</TextBlock>
                                             <TextBox Grid.Row="1" Grid.Column="3" Name="HitDiceHp" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Hit Die" Margin="2"></TextBox>
+                                                     Foreground="LightGray" Margin="2"></TextBox>
                                             
                                             <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="InitiativeLabel" VerticalAlignment="Center" Foreground="Black">Initiative:</TextBlock>
                                             <TextBox Grid.Row="2" Grid.Column="1" Name="InitiativeHp" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Initiative" Margin="2"></TextBox>
+                                                     Foreground="LightGray" Margin="2"></TextBox>
                                             <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" Name="SpeedLabel" VerticalAlignment="Center" Foreground="Black">Speed:</TextBlock>
                                             <TextBox Grid.Row="2" Grid.Column="3" Name="Speed" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Speed" Margin="2"></TextBox>
+                                                     Foreground="LightGray" Margin="2"></TextBox>
                                         </Grid>
-                                        
-                                        <!-- <TextBlock Name="CurrentHp"></TextBlock> -->
-                                        <!-- <TextBlock Name="MaxHp"></TextBlock> -->
-                                        <!-- <TextBlock Name="TemporaryHp"></TextBlock> -->
-                                        <!-- <Border BorderThickness="2" BorderBrush="Black"> -->
-                                        <!--     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"> -->
-                                        <!--         ~1~ Initiative|Hit Dice : DATA : Top Middle @1@ -->
-                                        <!--         <TextBlock Name="Initiative"></TextBlock> -->
-                                        <!--         <TextBlock Name="HitDice"></TextBlock> -->
-                                        <!--     </StackPanel> -->
-                                        <!-- </Border> -->
-                                        <!-- <TextBlock Name="ArmorClass"></TextBlock> -->
-                                        <!-- <TextBlock Name="Speed"></TextBlock> -->
                                     </StackPanel>
                                 </Border>
                             </StackPanel>
@@ -563,14 +549,72 @@
                     </StackPanel>
                 </Border>
                 <Border BorderThickness="2" BorderBrush="Black">
-                    <ScrollViewer Name="Proficiencies">
-
-                    </ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Name="ProficienciesHeader" Foreground="Black"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   >Proficiencies</TextBlock>
+                        <ScrollViewer>
+                            <TextBox Name="Proficiencies"
+                                     Background="SaddleBrown" Foreground="LightGray"
+                                     TextWrapping="Wrap" Height="190" Width="200"
+                                     HorizontalAlignment="Stretch" Watermark="Put your proficiencies here..."/>
+                        </ScrollViewer>
+                    </StackPanel>
                 </Border>
                 <Border BorderThickness="2" BorderBrush="Black">
-                    <ScrollViewer Name="Money">
-
-                    </ScrollViewer>
+                    <StackPanel>
+                        <!-- <TextBlock Name="MoneyHeader" Foreground="Black" -->
+                        <!--            VerticalAlignment="Center" HorizontalAlignment="Center" -->
+                        <!--            >Money</TextBlock> -->
+                        <ScrollViewer>
+                            <Grid Name="Money" Height="205"
+                                     Background="SaddleBrown" Margin="2"
+                                     RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="*,*,*">
+                                <!-- Row 0 -->
+                                <TextBlock Grid.Row="0" Grid.Column="0" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">Type</TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="1" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">Amount</TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="2" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">Conversion</TextBlock>
+                                
+                                <!-- Row 1 -->
+                                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="PlatinumLabel" Margin="1">Platinum:</TextBlock>
+                                <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                         Name="PlatinumAmount" Margin="1" Watermark="0" Width="50"/>
+                                <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="PlatinumConversion" Margin="1">10x Gold</TextBlock>
+                                
+                                <!-- Row 2 -->
+                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="GoldLabel" Margin="1">Gold:</TextBlock>
+                                <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                         Name="GoldAmount" Margin="1" Watermark="0" Width="50"/>
+                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="GoldConversion" Margin="1">10x Silver</TextBlock>
+                                
+                                <!-- Row 3 -->
+                                <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="ElectrumLabel" Margin="1">Electrum:</TextBlock>
+                                <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                         Name="ElectrumAmount" Margin="1" Watermark="0" Width="50"/>
+                                <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="ElectrumConversion" Margin="1">5x Silver</TextBlock>
+                                
+                                <!-- Row 4 -->
+                                <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="SilverLabel" Margin="1">Silver:</TextBlock>
+                                <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                         Name="SilverAmount" Margin="1" Watermark="0" Width="50"/>
+                                <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="SilverConversion" Margin="1">10x Copper</TextBlock>
+                                
+                                <!-- Row 5 -->
+                                <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Name="CopperLabel" Margin="1">Copper:</TextBlock>
+                                <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                         Name="CopperAmount" Margin="1" Watermark="0" Width="50"/>
+                            </Grid>
+                        </ScrollViewer>
+                    </StackPanel>
                 </Border>
                 <Border BorderThickness="2" BorderBrush="Black">
                     <ScrollViewer Name="Equipment">
