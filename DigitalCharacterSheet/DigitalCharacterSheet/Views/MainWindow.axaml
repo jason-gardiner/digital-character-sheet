@@ -31,7 +31,7 @@
                                 <!-- Image|Appearance/Game Stats|Battle Stats : DATA : Top Left-->
                                 <Button Name="ChangeCharacterImage">
                                     <Image Name="CharacterImage" Source="../Assets/default_character_image.png"
-                                           Width="100" Height="100"/>
+                                           Width="140" Height="140"/>
                                 </Button>
                                 <Border BorderThickness="2" BorderBrush="Black">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
@@ -43,26 +43,24 @@
                                                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="NameLabel" VerticalAlignment="Center" Foreground="Black">Name:</TextBlock>
                                                     <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ClassLabel" VerticalAlignment="Center" Foreground="Black">Class:</TextBlock>
                                                     <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="RaceLabel" VerticalAlignment="Center" Foreground="Black">Race:</TextBlock>
-                                                    <TextBox Grid.Row="0" Grid.Column="1" Name="Name" Width="180" Background="Navy"
+                                                    <TextBox Grid.Row="0" Grid.Column="1" Name="Name" Width="180" Background="SaddleBrown"
                                                               Foreground="LightGray" Watermark="Name..." Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="1" Grid.Column="1" Name="Class" Width="180" Background="Navy"
+                                                    <TextBox Grid.Row="1" Grid.Column="1" Name="Class" Width="180" Background="SaddleBrown"
                                                               Foreground="LightGray" Watermark="Class..." Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="2" Grid.Column="1" Name="Race" Width="180" Background="Navy"
+                                                    <TextBox Grid.Row="2" Grid.Column="1" Name="Race" Width="180" Background="SaddleBrown"
                                                               Foreground="LightGray" Watermark="Race..." Margin="2"></TextBox>
                                                 </Grid>
-                                                <Border BorderThickness="2" BorderBrush="Black">
-                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                                        <!-- Height|Weight : DATA : Top Left -->
-                                                        <Grid ColumnDefinitions="50, 65, 50, 65" RowDefinitions="*" Margin="2">
-                                                            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="HeightLabel" VerticalAlignment="Center" Foreground="Black">Height:</TextBlock>
-                                                            <TextBox Grid.Row="0" Grid.Column="1" Name="Height" Width="50" Background="Navy"
-                                                                     Foreground="LightGray" Margin="2"></TextBox>
-                                                            <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="WeightLabel" VerticalAlignment="Center" Foreground="Black">Weight:</TextBlock>
-                                                            <TextBox Grid.Row="0" Grid.Column="3" Name="Weight" Width="50" Background="Navy"
-                                                                     Foreground="LightGray" Margin="2"></TextBox>
-                                                        </Grid>
-                                                    </StackPanel>
-                                                </Border>
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                    <!-- Height|Weight : DATA : Top Left -->
+                                                    <Grid ColumnDefinitions="50, 65, 50, 65" RowDefinitions="*" Margin="2">
+                                                        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="HeightLabel" VerticalAlignment="Center" Foreground="Black">Height:</TextBlock>
+                                                        <TextBox Grid.Row="0" Grid.Column="1" Name="Height" Width="50" Background="SaddleBrown"
+                                                                 Foreground="LightGray" Margin="2"></TextBox>
+                                                        <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="WeightLabel" VerticalAlignment="Center" Foreground="Black">Weight:</TextBlock>
+                                                        <TextBox Grid.Row="0" Grid.Column="3" Name="Weight" Width="50" Background="SaddleBrown"
+                                                                 Foreground="LightGray" Margin="2"></TextBox>
+                                                    </Grid>
+                                                </StackPanel>
                                             </StackPanel>
                                         </Border>
                                         <Border BorderThickness="2" BorderBrush="Black">
@@ -73,14 +71,14 @@
                                                     <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="LevelLabel" VerticalAlignment="Center" Foreground="Black">LVL:</TextBlock>
                                                     <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="EthicsLabel" VerticalAlignment="Center" Foreground="Black">Ethics:</TextBlock>
                                                     <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Name="SizeLabel" VerticalAlignment="Center" Foreground="Black">Size:</TextBlock>
-                                                    <TextBox Grid.Row="0" Grid.Column="1" Name="Xp" Width="80" Background="Navy"
-                                                             Foreground="LightGray" Watermark="XP" Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="1" Grid.Column="1" Name="Level" Width="80" Background="Navy"
-                                                             Foreground="LightGray" Watermark="Level" Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="2" Grid.Column="1" Name="Ethics" Width="80" Background="Navy"
-                                                             Foreground="LightGray" Watermark="Ethics" Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="3" Grid.Column="1" Name="Size" Width="80" Background="Navy"
-                                                             Foreground="LightGray" Watermark="Size" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="0" Grid.Column="1" Name="Xp" Width="80" Background="SaddleBrown"
+                                                             Foreground="LightGray" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="1" Grid.Column="1" Name="Level" Width="80" Background="SaddleBrown"
+                                                             Foreground="LightGray" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="2" Grid.Column="1" Name="Ethics" Width="80" Background="SaddleBrown"
+                                                             Foreground="LightGray" Margin="2"></TextBox>
+                                                    <TextBox Grid.Row="3" Grid.Column="1" Name="Size" Width="80" Background="SaddleBrown"
+                                                             Foreground="LightGray" Margin="2"></TextBox>
                                                 </Grid>
                                             </StackPanel>
                                         </Border>
@@ -92,31 +90,31 @@
                                         
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="2">
                                             <TextBlock HorizontalAlignment="Right" Name="CurrentHpLabel" VerticalAlignment="Center" Foreground="Black">Current HP:</TextBlock>
-                                            <TextBox Name="CurrentHp" Width="85" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Current" Margin="2"></TextBox>
+                                            <TextBox Name="CurrentHp" Width="85" Background="SaddleBrown"
+                                                     Foreground="LightGray" Margin="2"></TextBox>
                                         </StackPanel>
                                         
                                         <Grid ColumnDefinitions="Auto, Auto, Auto, Auto" RowDefinitions="*, *, *" Margin="2">
                                             
                                             <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="MaxHpLabel" VerticalAlignment="Center" Foreground="Black">Max HP:</TextBlock>
-                                            <TextBox Grid.Row="0" Grid.Column="1" Name="MaxHp" Width="65" Background="Navy"
+                                            <TextBox Grid.Row="0" Grid.Column="1" Name="MaxHp" Width="65" Background="SaddleBrown"
                                                      Foreground="LightGray" Margin="2"></TextBox>
                                             <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="TemporaryHpLabel" VerticalAlignment="Center" Foreground="Black">Temp HP:</TextBlock>
-                                            <TextBox Grid.Row="0" Grid.Column="3" Name="TemporaryHp" Width="65" Background="Navy"
+                                            <TextBox Grid.Row="0" Grid.Column="3" Name="TemporaryHp" Width="65" Background="SaddleBrown"
                                                      Foreground="LightGray" Margin="2"></TextBox>
                                             
                                             <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ArmorClassLabel" VerticalAlignment="Center" Foreground="Black">AC:</TextBlock>
-                                            <TextBox Grid.Row="1" Grid.Column="1" Name="ArmorClass" Width="65" Background="Navy"
+                                            <TextBox Grid.Row="1" Grid.Column="1" Name="ArmorClass" Width="65" Background="SaddleBrown"
                                                      Foreground="LightGray" Margin="2"></TextBox>
                                             <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Name="HitDiceLabel" VerticalAlignment="Center" Foreground="Black">Hit Dice:</TextBlock>
-                                            <TextBox Grid.Row="1" Grid.Column="3" Name="HitDiceHp" Width="65" Background="Navy"
+                                            <TextBox Grid.Row="1" Grid.Column="3" Name="HitDiceHp" Width="65" Background="SaddleBrown"
                                                      Foreground="LightGray" Margin="2"></TextBox>
                                             
                                             <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="InitiativeLabel" VerticalAlignment="Center" Foreground="Black">Initiative:</TextBlock>
-                                            <TextBox Grid.Row="2" Grid.Column="1" Name="InitiativeHp" Width="65" Background="Navy"
+                                            <TextBox Grid.Row="2" Grid.Column="1" Name="InitiativeHp" Width="65" Background="SaddleBrown"
                                                      Foreground="LightGray" Margin="2"></TextBox>
                                             <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" Name="SpeedLabel" VerticalAlignment="Center" Foreground="Black">Speed:</TextBlock>
-                                            <TextBox Grid.Row="2" Grid.Column="3" Name="Speed" Width="65" Background="Navy"
+                                            <TextBox Grid.Row="2" Grid.Column="3" Name="Speed" Width="65" Background="SaddleBrown"
                                                      Foreground="LightGray" Margin="2"></TextBox>
                                         </Grid>
                                     </StackPanel>
@@ -159,25 +157,21 @@
                                     </StackPanel>
                                 </Border>
                                 <StackPanel Name="Skills" Orientation="Vertical" VerticalAlignment="Stretch"
-                                            MaxWidth="300" MaxHeight="620" Background="SaddleBrown">
+                                            Width="260" Height="617" Background="SaddleBrown">
                                     <Border BorderThickness="2" BorderBrush="DarkSlateGray">
                                         <Grid ColumnDefinitions=".8*, .8*, 2*, *" RowDefinitions="*">
                                             <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"
                                                        HorizontalAlignment="Center" Foreground="Black">
-                                                E
-                                            </TextBlock>
+                                                E</TextBlock>
                                             <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"
                                                        HorizontalAlignment="Center" Foreground="Black">
-                                                P
-                                            </TextBlock>
+                                                P</TextBlock>
                                             <TextBlock Grid.Column="2" Grid.Row="0" VerticalAlignment="Center"
                                                        HorizontalAlignment="Left" Foreground="Black">
-                                                Skills
-                                            </TextBlock>
+                                                Skills</TextBlock>
                                             <TextBlock Grid.Column="3" Grid.Row="0" VerticalAlignment="Center"
                                                        HorizontalAlignment="Center" Foreground="Black">
-                                                Mod
-                                            </TextBlock>
+                                                Mod</TextBlock>
                                         </Grid>
                                     </Border>
                                     <Border BorderThickness="2" BorderBrush="DarkSlateGray">
@@ -191,13 +185,11 @@
                                             <TextBlock Name="Athletics" Grid.Column="2" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Athletics
-                                            </TextBlock>
+                                                Athletics</TextBlock>
                                             <TextBlock Name="AthleticsModifier" Grid.Column="3" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
                                         </Grid>
                                     </Border>
                                     <Border BorderThickness="2" BorderBrush="DarkSlateGray">
@@ -211,13 +203,11 @@
                                             <TextBlock Name="Acrobatics" Grid.Column="2" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Acrobatics
-                                            </TextBlock>
+                                                Acrobatics</TextBlock>
                                             <TextBlock Name="AcrobaticsModifier" Grid.Column="3" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 1 -->
                                             <CheckBox Name="SleightOfHandExpertise" Grid.Column="0"
@@ -229,13 +219,11 @@
                                             <TextBlock Name="SleightOfHand" Grid.Column="2" Grid.Row="1"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Sleight of Hand
-                                            </TextBlock>
+                                                Sleight of Hand</TextBlock>
                                             <TextBlock Name="SleightOfHandModifier" Grid.Column="3"
                                                        Grid.Row="1" VerticalAlignment="Center"
                                                        HorizontalAlignment="Center" Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 2 -->
                                             <CheckBox Name="StealthExpertise" Grid.Column="0" Grid.Row="2"
@@ -245,13 +233,11 @@
                                             <TextBlock Name="Stealth" Grid.Column="2" Grid.Row="2"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Stealth
-                                            </TextBlock>
+                                                Stealth</TextBlock>
                                             <TextBlock Name="StealthModifier" Grid.Column="3" Grid.Row="2"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
                                         </Grid>
                                     </Border>
                                     <Border BorderThickness="2" BorderBrush="DarkSlateGray">
@@ -265,13 +251,11 @@
                                             <TextBlock Name="Arcana" Grid.Column="2" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Arcana
-                                            </TextBlock>
+                                                Arcana</TextBlock>
                                             <TextBlock Name="ArcanaModifier" Grid.Column="3" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 1 -->
                                             <CheckBox Name="HistoryExpertise" Grid.Column="0" Grid.Row="1"
@@ -281,13 +265,11 @@
                                             <TextBlock Name="History" Grid.Column="2" Grid.Row="1"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                History
-                                            </TextBlock>
+                                                History</TextBlock>
                                             <TextBlock Name="HistoryModifier" Grid.Column="3" Grid.Row="1"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 2 -->
                                             <CheckBox Name="InvestigationExpertise" Grid.Column="0"
@@ -299,13 +281,11 @@
                                             <TextBlock Name="Investigation" Grid.Column="2" Grid.Row="2"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Investigation
-                                            </TextBlock>
+                                                Investigation</TextBlock>
                                             <TextBlock Name="InvestigationModifier" Grid.Column="3"
                                                        Grid.Row="2" VerticalAlignment="Center"
                                                        HorizontalAlignment="Center" Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 3 -->
                                             <CheckBox Name="NatureExpertise" Grid.Column="0" Grid.Row="3"
@@ -315,13 +295,11 @@
                                             <TextBlock Name="Nature" Grid.Column="2" Grid.Row="3"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Nature
-                                            </TextBlock>
+                                                Nature</TextBlock>
                                             <TextBlock Name="NatureModifier" Grid.Column="3" Grid.Row="3"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 4 -->
                                             <CheckBox Name="ReligionExpertise" Grid.Column="0" Grid.Row="4"
@@ -331,13 +309,11 @@
                                             <TextBlock Name="Religion" Grid.Column="2" Grid.Row="4"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Religion
-                                            </TextBlock>
+                                                Religion</TextBlock>
                                             <TextBlock Name="ReligionModifier" Grid.Column="3" Grid.Row="4"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
                                         </Grid>
                                     </Border>
                                     <Border BorderThickness="2" BorderBrush="DarkSlateGray">
@@ -353,13 +329,11 @@
                                             <TextBlock Name="AnimalHandling" Grid.Column="2" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Animal Handling
-                                            </TextBlock>
+                                                Animal Handling</TextBlock>
                                             <TextBlock Name="AnimalHandlingModifier" Grid.Column="3"
                                                        Grid.Row="0" VerticalAlignment="Center"
                                                        HorizontalAlignment="Center" Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 1 -->
                                             <CheckBox Name="InsightExpertise" Grid.Column="0" Grid.Row="1"
@@ -369,13 +343,11 @@
                                             <TextBlock Name="Insight" Grid.Column="2" Grid.Row="1"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Insight
-                                            </TextBlock>
+                                                Insight</TextBlock>
                                             <TextBlock Name="InsightModifier" Grid.Column="3" Grid.Row="1"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 2 -->
                                             <CheckBox Name="MedicineExpertise" Grid.Column="0" Grid.Row="2"
@@ -385,13 +357,11 @@
                                             <TextBlock Name="Medicine" Grid.Column="2" Grid.Row="2"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Medicine
-                                            </TextBlock>
+                                                Medicine</TextBlock>
                                             <TextBlock Name="MedicineModifier" Grid.Column="3" Grid.Row="2"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 3 -->
                                             <CheckBox Name="PerceptionExpertise" Grid.Column="0" Grid.Row="3"
@@ -401,13 +371,11 @@
                                             <TextBlock Name="Perception" Grid.Column="2" Grid.Row="3"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Perception
-                                            </TextBlock>
+                                                Perception</TextBlock>
                                             <TextBlock Name="PerceptionModifier" Grid.Column="3" Grid.Row="3"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 4 -->
                                             <CheckBox Name="SurvivalExpertise" Grid.Column="0" Grid.Row="4"
@@ -417,13 +385,11 @@
                                             <TextBlock Name="Survival" Grid.Column="2" Grid.Row="4"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Survival
-                                            </TextBlock>
+                                                Survival</TextBlock>
                                             <TextBlock Name="SurvivalModifier" Grid.Column="3" Grid.Row="4"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
                                         </Grid>
                                     </Border>
                                     <Border BorderThickness="2" BorderBrush="DarkSlateGray">
@@ -437,13 +403,11 @@
                                             <TextBlock Name="Deception" Grid.Column="2" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Deception
-                                            </TextBlock>
+                                                Deception</TextBlock>
                                             <TextBlock Name="DeceptionModifier" Grid.Column="3" Grid.Row="0"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 1 -->
                                             <CheckBox Name="IntimidationExpertise" Grid.Column="0" Grid.Row="1"
@@ -454,13 +418,11 @@
                                             <TextBlock Name="Intimidation" Grid.Column="2" Grid.Row="1"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Intimidation
-                                            </TextBlock>
+                                                Intimidation</TextBlock>
                                             <TextBlock Name="IntimidationModifier" Grid.Column="3" Grid.Row="1"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 2 -->
                                             <CheckBox Name="PerformanceExpertise" Grid.Column="0" Grid.Row="2"
@@ -471,13 +433,11 @@
                                             <TextBlock Name="Performance" Grid.Column="2" Grid.Row="2"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Performance
-                                            </TextBlock>
+                                                Performance</TextBlock>
                                             <TextBlock Name="PerformanceModifier" Grid.Column="3" Grid.Row="2"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
 
                                             <!-- Row 3 -->
                                             <CheckBox Name="PersuasionExpertise" Grid.Column="0" Grid.Row="3"
@@ -487,13 +447,11 @@
                                             <TextBlock Name="Persuasion" Grid.Column="2" Grid.Row="3"
                                                        VerticalAlignment="Center" HorizontalAlignment="Left"
                                                        TextWrapping="Wrap" Foreground="Black">
-                                                Persuasion
-                                            </TextBlock>
+                                                Persuasion</TextBlock>
                                             <TextBlock Name="PersuasionModifier" Grid.Column="3" Grid.Row="3"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                +0</TextBlock>
                                         </Grid>
                                     </Border>
                                 </StackPanel>
