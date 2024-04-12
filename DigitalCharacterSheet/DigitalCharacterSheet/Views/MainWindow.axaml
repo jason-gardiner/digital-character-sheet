@@ -475,13 +475,61 @@
                                 <Border BorderThickness="2" BorderBrush="Black">
                                     <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
                                         <!-- Personality Traits|Ideals|Bonds|Flaws : DATA : Top Right -->
-                                        <TextBlock Name="PersonalityTraits"></TextBlock>
-                                        <TextBlock Name="Ideals"></TextBlock>
-                                        <TextBlock Name="Bonds"></TextBlock>
-                                        <TextBlock Name="Flaws"></TextBlock>
+                                        <TextBlock Name="PersonalityTraitsHeader" Foreground="Black"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2"
+                                        >Personality Traits</TextBlock>
+                                        <ScrollViewer>
+                                            <TextBox Name="PersonalityTraits"
+                                                     Background="SaddleBrown" Foreground="LightGray"
+                                                     TextWrapping="Wrap" Height="60" Width="200"
+                                                     HorizontalAlignment="Stretch" Margin="2"
+                                                     Watermark="Put your personality traits here..."/>
+                                        </ScrollViewer>
+                                        <TextBlock Name="IdealsHeader" Foreground="Black"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2"
+                                        >Ideals</TextBlock>
+                                        <ScrollViewer>
+                                            <TextBox Name="Ideals"
+                                                     Background="SaddleBrown" Foreground="LightGray"
+                                                     TextWrapping="Wrap" Height="60" Width="200"
+                                                     HorizontalAlignment="Stretch" Margin="2"
+                                                     Watermark="Put your ideals here..."/>
+                                        </ScrollViewer>
+                                        <TextBlock Name="BondsHeader" Foreground="Black"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2"
+                                        >Bonds</TextBlock>
+                                        <ScrollViewer>
+                                            <TextBox Name="Bonds"
+                                                     Background="SaddleBrown" Foreground="LightGray"
+                                                     TextWrapping="Wrap" Height="60" Width="200"
+                                                     HorizontalAlignment="Stretch" Margin="2"
+                                                     Watermark="Put your bonds here..."/>
+                                        </ScrollViewer>
+                                        <TextBlock Name="FlawsHeader" Foreground="Black"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2"
+                                        >Flaws</TextBlock>
+                                        <ScrollViewer>
+                                            <TextBox Name="Flaws"
+                                                     Background="SaddleBrown" Foreground="LightGray"
+                                                     TextWrapping="Wrap" Height="60" Width="200"
+                                                     HorizontalAlignment="Stretch" Margin="2"
+                                                     Watermark="Put your flaws here..."/>
+                                        </ScrollViewer>
                                     </StackPanel>
                                 </Border>
-                                <TextBlock Name="Backstory"></TextBlock>
+                                <TextBlock Name="BackstoryHeader" Foreground="Black"
+                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                >Backstory</TextBlock>
+                                <ScrollViewer>
+                                    <TextBox Name="Backstory"
+                                             Background="SaddleBrown" Foreground="LightGray"
+                                             TextWrapping="Wrap" Height="415" Width="200"
+                                             HorizontalAlignment="Stretch" Watermark="Put your backstory here..."/>
+                                </ScrollViewer>
                             </StackPanel>
                         </Border>
                     </StackPanel>
@@ -514,20 +562,17 @@
                         <ScrollViewer>
                             <TextBox Name="Proficiencies"
                                      Background="SaddleBrown" Foreground="LightGray"
-                                     TextWrapping="Wrap" Height="190" Width="200"
+                                     TextWrapping="Wrap" Height="190" Width="220"
                                      HorizontalAlignment="Stretch" Watermark="Put your proficiencies here..."/>
                         </ScrollViewer>
                     </StackPanel>
                 </Border>
                 <Border BorderThickness="2" BorderBrush="Black">
                     <StackPanel>
-                        <!-- <TextBlock Name="MoneyHeader" Foreground="Black" -->
-                        <!--            VerticalAlignment="Center" HorizontalAlignment="Center" -->
-                        <!--            >Money</TextBlock> -->
                         <ScrollViewer>
-                            <Grid Name="Money" Height="205"
+                            <Grid Name="Money" Height="205" Width="250"
                                      Background="SaddleBrown" Margin="2"
-                                     RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="*,*,*">
+                                     RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="1.2*,*,1.2*">
                                 <!-- Row 0 -->
                                 <TextBlock Grid.Row="0" Grid.Column="0" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">Type</TextBlock>
                                 <TextBlock Grid.Row="0" Grid.Column="1" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">Amount</TextBlock>
@@ -575,9 +620,17 @@
                     </StackPanel>
                 </Border>
                 <Border BorderThickness="2" BorderBrush="Black">
-                    <ScrollViewer Name="Equipment">
-
-                    </ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Name="EquipmentHeader" Foreground="Black"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   >Equipment</TextBlock>
+                        <ScrollViewer>
+                            <TextBox Name="Equipment"
+                                     Background="SaddleBrown" Foreground="LightGray"
+                                     TextWrapping="Wrap" Height="190" Width="500"
+                                     HorizontalAlignment="Stretch" Watermark="Put your equipment here..."/>
+                        </ScrollViewer>
+                    </StackPanel>
                 </Border>
             </StackPanel>
         </Border>
