@@ -4,8 +4,25 @@ namespace DigitalCharacterSheet.character;
 
 public class CharacterStatistics
 {
+    public CharacterStatistics()
+    {
+        _statsArray = new();
+    }
+    public CharacterStatistics(StatsArray statsArray)
+    {
+        _statsArray = statsArray;
+    }
     public struct StatsArray
     {
+        public StatsArray()
+        {
+            Strength = 10;
+            Dexterity = 10;
+            Constitution = 10;
+            Intelligence = 10;
+            Wisdom = 10;
+            Charisma = 10;
+        }
         public StatsArray(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
         {
             Strength = strength;
@@ -73,15 +90,44 @@ public class CharacterStatistics
 
     private StatsArray _statsArray;
 
-    public CharacterStatistics(StatsArray statsArray)
+    
+    
+    public int Strength
     {
-        _statsArray = statsArray;
+        get => _statsArray.Strength;
+        set => _statsArray.Strength = value;
     }
 
-    public int StrengthModifier => (int)MathF.Floor((_statsArray.Strength - 10) / 2f);
-    public int DexterityModifier => (int)MathF.Floor((_statsArray.Dexterity - 10) / 2f);
-    public int ConstitutionModifier => (int)MathF.Floor((_statsArray.Constitution - 10) / 2f);
-    public int IntelligenceModifier => (int)MathF.Floor((_statsArray.Intelligence - 10) / 2f);
-    public int WisdomModifier => (int)MathF.Floor((_statsArray.Wisdom - 10) / 2f);
-    public int CharismaModifier => (int)MathF.Floor((_statsArray.Charisma- 10) / 2f);
+    public int Dexterity
+    {
+        get => _statsArray.Strength;
+        set => _statsArray.Strength = value;
+    }
+    public int Constitution
+    {
+        get => _statsArray.Strength;
+        set => _statsArray.Strength = value;
+    }
+    public int Intelligence
+    {
+        get => _statsArray.Strength;
+        set => _statsArray.Strength = value;
+    }
+    public int Wisdom
+    {
+        get => _statsArray.Strength;
+        set => _statsArray.Strength = value;
+    }
+    public int Charisma
+    {
+        get => _statsArray.Strength;
+        set => _statsArray.Strength = value;
+    }
+
+    public int StrengthModifier => (int)MathF.Floor((Strength - 10) / 2f);
+    public int DexterityModifier => (int)MathF.Floor((Dexterity - 10) / 2f);
+    public int ConstitutionModifier => (int)MathF.Floor((Constitution - 10) / 2f);
+    public int IntelligenceModifier => (int)MathF.Floor((Intelligence - 10) / 2f);
+    public int WisdomModifier => (int)MathF.Floor((Wisdom - 10) / 2f);
+    public int CharismaModifier => (int)MathF.Floor((Charisma - 10) / 2f);
 }

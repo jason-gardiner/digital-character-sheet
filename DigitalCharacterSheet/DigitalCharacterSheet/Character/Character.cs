@@ -8,6 +8,11 @@ using DigitalCharacterSheet.character;
 namespace DigitalCharacterSheet.Character;
 public class Character
 {
+   public Character()
+   {
+      Name = "";
+      Race = "";
+   }
    Character(string name = "", string race = "", Tuple<string, int>[] charClass = null)
    {
       Name = name;
@@ -45,5 +50,5 @@ public class Character
    
 #endregion
    
-   public CharacterStatistics CharacterStats;
+   public CharacterStatistics CharacterStats = new();
 }

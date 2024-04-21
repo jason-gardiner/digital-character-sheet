@@ -33,4 +33,6 @@ public partial class App : Application
 
         base.OnFrameworkInitializationCompleted();
     }
+
+    public static Character.Character LoadedCharacter = new();
 }
