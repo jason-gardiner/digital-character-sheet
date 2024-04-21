@@ -87,7 +87,7 @@
                                             </Border>
                                         </StackPanel>
                                     </Border>
-                                    <Border BorderThickness="2" BorderBrush="Black">
+                                    <Border BorderThickness="4" BorderBrush="Black">
                                         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
                                             <!-- Current HP|Max HP|Temporary HP|StackPanel|Armor Class|Speed : DATA : Top Middle-->
                                             
@@ -125,7 +125,7 @@
                             </Border>
                             <Border BorderThickness="2" BorderBrush="Black">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                    <!-- Ability Scores|Skills|Spell Slots Remaining/Ability Charges : DATA : Middle Left -->
+                                    <!-- Ability Scores|Skills|Spell Slots : DATA : Middle Left -->
                                     <Border BorderThickness="2" BorderBrush="Black">
                                         <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch" Background="Gray">
                                             <TextBlock HorizontalAlignment="Center" Margin="2">Str</TextBlock>
@@ -162,15 +162,15 @@
                                             <TextBox Name="Inspiration" TextAlignment="Center" Margin="8, 2">10</TextBox>
                                             <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
                                             
-                                            <TextBlock HorizontalAlignment="Center" Margin="2, 2, 2, 0"
+                                            <TextBlock HorizontalAlignment="Center" Margin="4, 2, 4, 0"
                                             MaxWidth="75">Proficiency</TextBlock>
-                                            <TextBlock HorizontalAlignment="Center" Margin="2, 0, 2, 3"
+                                            <TextBlock HorizontalAlignment="Center" Margin="4, 0, 4, 3"
                                             MaxWidth="75">Bonus</TextBlock>
                                             <TextBlock Name="ProficiencyMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Name="Skills" Orientation="Vertical" VerticalAlignment="Stretch"
-                                                Width="260" Height="617" Background="SaddleBrown">
+                                                Width="265" Height="617" Background="SaddleBrown">
                                         <Border BorderThickness="2" BorderBrush="Black">
                                             <Grid ColumnDefinitions=".8*, .8*, 2*, *" RowDefinitions="*">
                                                 <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"
@@ -468,7 +468,158 @@
                                             </Grid>
                                         </Border>
                                     </StackPanel>
-                                    <ScrollViewer Name="SpellSlotsAbilityCharges"></ScrollViewer>
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <Grid Name="SpellSlots" RowDefinitions=".2*, *, .5*, *, .5*, *, .5*, *, *" Background="SaddleBrown" Width="478">
+                                            <TextBlock Name="SpellSlotsHeader" Grid.Row="1" Foreground="White"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       FontSize="32"
+                                            >Spell Slots</TextBlock>
+                                            <Grid Name="SlotsLvlOneTwoThree" Grid.Row="3" ColumnDefinitions="*, 1.5*, 1.5*, 1.5*, *" Margin="2"
+                                                        VerticalAlignment="Center" HorizontalAlignment="Center" Width="474">
+                                                <Grid Name="SlotsOne" Grid.Column="1" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL I</TextBlock>
+                                                    <CheckBox Name="SlotOneA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotOneB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotOneC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotOneD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsTwo" Grid.Column="2" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL II</TextBlock>
+                                                    <CheckBox Name="SlotsTwoA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsTwoB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsTwoC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsTwoD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsThree" Grid.Column="3" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL III</TextBlock>
+                                                    <CheckBox Name="SlotsThreeA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsThreeB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsThreeC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsThreeD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </Grid>
+                                            <Grid Name="SlotsLvlFourFiveSix" Grid.Row="5" ColumnDefinitions="*, 1.5*, 1.5*, 1.5*, *" Margin="2"
+                                                        VerticalAlignment="Center" HorizontalAlignment="Center" Width="474">
+                                                <Grid Name="SlotsFour" Grid.Column="1" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL IV</TextBlock>
+                                                    <CheckBox Name="SlotFourA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotFourB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotFourC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotFourD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsFive" Grid.Column="2" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL V</TextBlock>
+                                                    <CheckBox Name="SlotsFiveA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsFiveB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsFiveC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsFiveD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsSix" Grid.Column="3" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL VI</TextBlock>
+                                                    <CheckBox Name="SlotsSixA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsSixB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsSixC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsSixD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </Grid>
+                                            <Grid Name="SlotsLvlSevenEightNine" Grid.Row="7" ColumnDefinitions="*, 1.5*, 1.5*, 1.5*, *" Margin="2"
+                                                        VerticalAlignment="Center" HorizontalAlignment="Center" Width="474">
+                                                <Grid Name="SlotsSeven" Grid.Column="1" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL VII</TextBlock>
+                                                    <CheckBox Name="SlotSevenA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotSevenB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotSevenC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotSevenD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsEight" Grid.Column="2" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL VIII</TextBlock>
+                                                    <CheckBox Name="SlotsEightA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsEightB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsEightC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsEightD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsNine" Grid.Column="3" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL IX</TextBlock>
+                                                    <CheckBox Name="SlotsNineA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsNineB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsNineC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsNineD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
                                 </StackPanel>
                             </Border>
                         </StackPanel>
@@ -507,7 +658,23 @@
                             </Border>
                             <Border BorderThickness="2" BorderBrush="Black">
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-                                    <!-- Character Traits|Backstory : DATA : Upper Right Side -->
+                                    <!-- Menu|Character Traits|CharacterBackground|Backstory : DATA : Upper Right Side -->
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button Name="SaveSheet">
+                                                <Image Name="SaveSheetImage" Source="../Assets/save_sheet.png"
+                                                       Width="30" Height="30" Margin="4, 0"/>
+                                            </Button>
+                                            <Button Name="OpenSheet">
+                                                <Image Name="OpenSheetImage" Source="../Assets/open_sheet.png"
+                                                       Width="30" Height="30" Margin="4, 0"/>
+                                            </Button>
+                                            <Button Name="CloseSheet">
+                                                <Image Name="CloseSheetImage" Source="../Assets/close_sheet.png"
+                                                       Width="30" Height="30" Margin="4, 0"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </Border>
                                     <Border BorderThickness="2" BorderBrush="Black">
                                         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
                                             <!-- Personality Traits|Ideals|Bonds|Flaws : DATA : Top Right -->
@@ -559,17 +726,27 @@
                                     </Border>
                                     <Border BorderThickness="2" BorderBrush="Black">
                                         <StackPanel>
+                                            <TextBlock Name="BackgroundHeader" Foreground="Black"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                            >Background</TextBlock>
+                                            <TextBox Name="CharacterBackground"
+                                                     Background="SaddleBrown" Foreground="LightGray"
+                                                     TextWrapping="Wrap" Height="30" Width="200" Margin="2"
+                                                     HorizontalAlignment="Stretch" Watermark="Put your background here..."/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <StackPanel>
                                             <TextBlock Name="BackstoryHeader" Foreground="Black"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                                        >Backstory</TextBlock>
                                             <ScrollViewer>
                                                 <TextBox Name="Backstory"
                                                 Background="SaddleBrown" Foreground="LightGray"
-                                                TextWrapping="Wrap" Height="412" Width="200" Margin="2"
+                                                TextWrapping="Wrap" Height="308" Width="200" Margin="2"
                                                 HorizontalAlignment="Stretch" Watermark="Put your backstory here..."/>
                                             </ScrollViewer>
                                         </StackPanel>
-                                        
                                     </Border>
                                 </StackPanel>
                             </Border>
