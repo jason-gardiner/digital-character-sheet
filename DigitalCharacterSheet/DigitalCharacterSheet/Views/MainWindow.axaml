@@ -143,8 +143,8 @@
                                 <Border BorderThickness="2" BorderBrush="Black">
                                     <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch" Background="Gray">
                                         <TextBlock HorizontalAlignment="Center">Str</TextBlock>
-                                        <TextBox Name="Str" TextAlignment="Center">10</TextBox>
-                                        <TextBlock Name="StrMod" HorizontalAlignment="Center">0</TextBlock>
+                                        <TextBox Name="Str" TextAlignment="Center" Text="{Binding StrengthText}" LostFocus="Str_OnLostFocus"/>
+                                        <TextBlock Name="StrMod" HorizontalAlignment="Center" Text="{Binding StrengthModifier}"></TextBlock>
                                         <Rectangle Fill="Black" Height="2"></Rectangle>
                                         
                                         <TextBlock HorizontalAlignment="Center">Dex</TextBlock>
