@@ -15,570 +15,932 @@
         <vm:MainViewModel />
     </Design.DataContext>
 
-    <!-- The comments are structured as item a|item b|item c.
-            If the StackPanel is vertical, item a is the topmost.
-            If the StackPanel is horizontal, item a is the leftmost. -->
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Beige">
-        <!-- Top(Stats, Backstory)|Bottom(Proficiencies, Inventory) : Layout : Full Screen -->
-        <Border BorderThickness="2" BorderBrush="Black">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                <!-- Stats|Attacks/Story : Layout : Top Half -->
-                <Border BorderThickness="2" BorderBrush="Black">
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-                        <!-- Top Half Stats|Bottom Half Stats : Layout : Top Left -->
-                        <Border BorderThickness="2" BorderBrush="Black">
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                <!-- Image|Appearance/Game Stats|Battle Stats : DATA : Top Left-->
-                                <Button Name="ChangeCharacterImage">
-                                    <Image Name="CharacterImage" Source="../Assets/default_character_image.png"
-                                           Width="100" Height="100"/>
-                                </Button>
-                                <Border BorderThickness="2" BorderBrush="Black">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                        <!-- Appearance|Game Stats : DATA : Top Left -->
-                                        <Border BorderThickness="2" BorderBrush="Black">
-                                            <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-                                                <!-- Name|Class|Race|Height/Weight : DATA : Top Left -->
-                                                <Grid ColumnDefinitions="50, 180" RowDefinitions="*, *, *" Margin="2">
-                                                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="NameLabel" VerticalAlignment="Center" Foreground="Black">Name:</TextBlock>
-                                                    <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ClassLabel" VerticalAlignment="Center" Foreground="Black">Class:</TextBlock>
-                                                    <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="RaceLabel" VerticalAlignment="Center" Foreground="Black">Race:</TextBlock>
-                                                    <TextBox Grid.Row="0" Grid.Column="1" Name="Name" Width="180" Background="Navy"
-                                                              Foreground="LightGray" Watermark="Name" Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="1" Grid.Column="1" Name="Class" Width="180" Background="Navy"
-                                                              Foreground="LightGray" Watermark="Class" Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="2" Grid.Column="1" Name="Race" Width="180" Background="Navy"
-                                                              Foreground="LightGray" Watermark="Race" Margin="2"></TextBox>
-                                                </Grid>
-                                                <Border BorderThickness="2" BorderBrush="Black">
+    <ScrollViewer>
+        <!-- The comments are structured as item A|item B|item C.
+                If the StackPanel is vertical, item A is the topmost.
+                If the StackPanel is horizontal, item A is the leftmost. -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Beige">
+            <!-- Top(Stats, Backstory)|Bottom(Proficiencies, Inventory) : Layout : Full Screen -->
+            <Border BorderThickness="2" BorderBrush="Black">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <!-- Stats|Attacks/Story : Layout : Top Half -->
+                    <Border BorderThickness="2" BorderBrush="Black">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                            <!-- Top Half Stats|Bottom Half Stats : Layout : Top Left -->
+                            <Border BorderThickness="2" BorderBrush="Black">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <!-- Image|Appearance/Game Stats|Battle Stats : DATA : Top Left-->
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <Button Name="ChangeCharacterImage">
+                                            <Image Name="CharacterImage" Source="../Assets/default_character_image.png"
+                                                   Width="136" Height="136"/>
+                                        </Button>
+                                    </Border>
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                            <!-- Appearance|Game Stats : DATA : Top Left -->
+                                            <Border BorderThickness="2" BorderBrush="Black">
+                                                <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                                                    <!-- Name|Class|Race|Height/Weight : DATA : Top Left -->
+                                                    <Grid ColumnDefinitions="50, 180" RowDefinitions="*, *, *" Margin="2">
+                                                        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="NameLabel" VerticalAlignment="Center" Foreground="Black">Name:</TextBlock>
+                                                        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ClassLabel" VerticalAlignment="Center" Foreground="Black">Class:</TextBlock>
+                                                        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="RaceLabel" VerticalAlignment="Center" Foreground="Black">Race:</TextBlock>
+                                                        <TextBox Grid.Row="0" Grid.Column="1" Name="Name" Width="180" Background="SaddleBrown"
+                                                                  Foreground="LightGray" Watermark="Name..." Margin="2"></TextBox>
+                                                        <TextBox Grid.Row="1" Grid.Column="1" Name="Class" Width="180" Background="SaddleBrown"
+                                                                  Foreground="LightGray" Watermark="Class..." Margin="2"></TextBox>
+                                                        <TextBox Grid.Row="2" Grid.Column="1" Name="Race" Width="180" Background="SaddleBrown"
+                                                                  Foreground="LightGray" Watermark="Race..." Margin="2"></TextBox>
+                                                    </Grid>
                                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                                         <!-- Height|Weight : DATA : Top Left -->
                                                         <Grid ColumnDefinitions="50, 65, 50, 65" RowDefinitions="*" Margin="2">
                                                             <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="HeightLabel" VerticalAlignment="Center" Foreground="Black">Height:</TextBlock>
-                                                            <TextBox Grid.Row="0" Grid.Column="1" Name="Height" Width="50" Background="Navy"
-                                                                     Foreground="LightGray" Watermark="Height" Margin="2"></TextBox>
+                                                            <TextBox Grid.Row="0" Grid.Column="1" Name="Height" Width="50" Background="SaddleBrown"
+                                                                     Foreground="LightGray" Margin="2"></TextBox>
                                                             <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="WeightLabel" VerticalAlignment="Center" Foreground="Black">Weight:</TextBlock>
-                                                            <TextBox Grid.Row="0" Grid.Column="3" Name="Weight" Width="50" Background="Navy"
-                                                                     Foreground="LightGray" Watermark="Weight" Margin="2"></TextBox>
+                                                            <TextBox Grid.Row="0" Grid.Column="3" Name="Weight" Width="50" Background="SaddleBrown"
+                                                                     Foreground="LightGray" Margin="2"></TextBox>
                                                         </Grid>
                                                     </StackPanel>
-                                                </Border>
+                                                </StackPanel>
+                                            </Border>
+                                            <Border BorderThickness="2" BorderBrush="Black">
+                                                <StackPanel>
+                                                    <!-- XP|LVL|Alignment|Size : DATA : Top Left -->
+                                                    <Grid ColumnDefinitions="50, 95" RowDefinitions="*, *, *, *" Margin="2">
+                                                        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="XpLabel" VerticalAlignment="Center" Foreground="Black">XP:</TextBlock>
+                                                        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="LevelLabel" VerticalAlignment="Center" Foreground="Black">LVL:</TextBlock>
+                                                        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="EthicsLabel" VerticalAlignment="Center" Foreground="Black">Ethics:</TextBlock>
+                                                        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Name="SizeLabel" VerticalAlignment="Center" Foreground="Black">Size:</TextBlock>
+                                                        <TextBox Grid.Row="0" Grid.Column="1" Name="Xp" Width="80" Background="SaddleBrown"
+                                                                 Foreground="LightGray" Margin="2"></TextBox>
+                                                        <TextBox Grid.Row="1" Grid.Column="1" Name="Level" Width="80" Background="SaddleBrown"
+                                                                 Foreground="LightGray" Margin="2"></TextBox>
+                                                        <TextBox Grid.Row="2" Grid.Column="1" Name="Ethics" Width="80" Background="SaddleBrown"
+                                                                 Foreground="LightGray" Margin="2"></TextBox>
+                                                        <TextBox Grid.Row="3" Grid.Column="1" Name="Size" Width="80" Background="SaddleBrown"
+                                                                 Foreground="LightGray" Margin="2"></TextBox>
+                                                    </Grid>
+                                                </StackPanel>
+                                            </Border>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border BorderThickness="4" BorderBrush="Black">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                                            <!-- Current HP|Max HP|Temporary HP|StackPanel|Armor Class|Speed : DATA : Top Middle-->
+                                            
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="2">
+                                                <TextBlock HorizontalAlignment="Right" Name="CurrentHpLabel" VerticalAlignment="Center" Foreground="Black">Current HP:</TextBlock>
+                                                <TextBox Name="CurrentHp" Width="85" Background="SaddleBrown"
+                                                         Foreground="LightGray" Margin="2"></TextBox>
                                             </StackPanel>
+                                            
+                                            <Grid ColumnDefinitions="Auto, Auto, Auto, Auto" RowDefinitions="*, *, *" Margin="2">
+                                                <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="MaxHpLabel" VerticalAlignment="Center" Foreground="Black">Max HP:</TextBlock>
+                                                <TextBox Grid.Row="0" Grid.Column="1" Name="MaxHp" Width="65" Background="SaddleBrown"
+                                                         Foreground="LightGray" Margin="2"></TextBox>
+                                                <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="TemporaryHpLabel" VerticalAlignment="Center" Foreground="Black">Temp HP:</TextBlock>
+                                                <TextBox Grid.Row="0" Grid.Column="3" Name="TemporaryHp" Width="65" Background="SaddleBrown"
+                                                         Foreground="LightGray" Margin="2"></TextBox>
+                                                
+                                                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ArmorClassLabel" VerticalAlignment="Center" Foreground="Black">AC:</TextBlock>
+                                                <TextBox Grid.Row="1" Grid.Column="1" Name="ArmorClass" Width="65" Background="SaddleBrown"
+                                                         Foreground="LightGray" Margin="2"></TextBox>
+                                                <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Name="HitDiceLabel" VerticalAlignment="Center" Foreground="Black">Hit Dice:</TextBlock>
+                                                <TextBox Grid.Row="1" Grid.Column="3" Name="HitDiceHp" Width="65" Background="SaddleBrown"
+                                                         Foreground="LightGray" Margin="2"></TextBox>
+                                                
+                                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="InitiativeLabel" VerticalAlignment="Center" Foreground="Black">Initiative:</TextBlock>
+                                                <TextBox Grid.Row="2" Grid.Column="1" Name="InitiativeHp" Width="65" Background="SaddleBrown"
+                                                         Foreground="LightGray" Margin="2"></TextBox>
+                                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" Name="SpeedLabel" VerticalAlignment="Center" Foreground="Black">Speed:</TextBlock>
+                                                <TextBox Grid.Row="2" Grid.Column="3" Name="Speed" Width="65" Background="SaddleBrown"
+                                                         Foreground="LightGray" Margin="2"></TextBox>
+                                            </Grid>
+                                        </StackPanel>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+                            <Border BorderThickness="2" BorderBrush="Black">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <!-- Ability Scores|Skills|Spell Slots : DATA : Middle Left -->
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch" Background="Gray">
+                                            <TextBlock HorizontalAlignment="Center" Margin="2">Str</TextBlock>
+                                            <TextBox Name="Str" TextAlignment="Center" Margin="8,2">10</TextBox>
+                                            <TextBlock Name="StrMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
+                                            
+                                            <TextBlock HorizontalAlignment="Center" Margin="2">Dex</TextBlock>
+                                            <TextBox Name="Dex" TextAlignment="Center" Margin="8, 2">10</TextBox>
+                                            <TextBlock Name="DexMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
+
+                                            <TextBlock HorizontalAlignment="Center" Margin="2">Con</TextBlock>
+                                            <TextBox Name="Con" TextAlignment="Center" Margin="8, 2">10</TextBox>
+                                            <TextBlock Name="ConMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
+
+                                            <TextBlock HorizontalAlignment="Center" Margin="2">Int</TextBlock>
+                                            <TextBox Name="Int" TextAlignment="Center" Margin="8, 2">10</TextBox>
+                                            <TextBlock Name="IntMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
+
+                                            <TextBlock HorizontalAlignment="Center" Margin="2">Wis</TextBlock>
+                                            <TextBox Name="Wis" TextAlignment="Center" Margin="8, 2">10</TextBox>
+                                            <TextBlock Name="WisMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
+
+                                            <TextBlock HorizontalAlignment="Center" Margin="2">Cha</TextBlock>
+                                            <TextBox Name="Cha" TextAlignment="Center" Margin="8, 2">10</TextBox>
+                                            <TextBlock Name="ChaMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
+                                            
+                                            <TextBlock HorizontalAlignment="Center" Margin="2">Inspiration</TextBlock>
+                                            <TextBox Name="Inspiration" TextAlignment="Center" Margin="8, 2">10</TextBox>
+                                            <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
+                                            
+                                            <TextBlock HorizontalAlignment="Center" Margin="4, 2, 4, 0"
+                                            MaxWidth="75">Proficiency</TextBlock>
+                                            <TextBlock HorizontalAlignment="Center" Margin="4, 0, 4, 3"
+                                            MaxWidth="75">Bonus</TextBlock>
+                                            <TextBlock Name="ProficiencyMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                        </StackPanel>
+                                    </Border>
+                                    <StackPanel Name="Skills" Orientation="Vertical" VerticalAlignment="Stretch"
+                                                Width="265" Height="617" Background="SaddleBrown">
+                                        <Border BorderThickness="2" BorderBrush="Black">
+                                            <Grid ColumnDefinitions=".8*, .8*, 2*, *" RowDefinitions="*">
+                                                <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"
+                                                           HorizontalAlignment="Center" Foreground="White">
+                                                    E</TextBlock>
+                                                <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"
+                                                           HorizontalAlignment="Center" Foreground="White">
+                                                    P</TextBlock>
+                                                <TextBlock Grid.Column="2" Grid.Row="0" VerticalAlignment="Center"
+                                                           HorizontalAlignment="Left" Foreground="White">
+                                                    Skills</TextBlock>
+                                                <TextBlock Grid.Column="3" Grid.Row="0" VerticalAlignment="Center"
+                                                           HorizontalAlignment="Center" Foreground="White">
+                                                    Mod</TextBlock>
+                                            </Grid>
                                         </Border>
                                         <Border BorderThickness="2" BorderBrush="Black">
-                                            <StackPanel>
-                                                <!-- XP|LVL|Alignment|Size : DATA : Top Left -->
-                                                <Grid ColumnDefinitions="50, 95" RowDefinitions="*, *, *, *" Margin="2">
-                                                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="XpLabel" VerticalAlignment="Center" Foreground="Black">XP:</TextBlock>
-                                                    <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="LevelLabel" VerticalAlignment="Center" Foreground="Black">LVL:</TextBlock>
-                                                    <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="EthicsLabel" VerticalAlignment="Center" Foreground="Black">Ethics:</TextBlock>
-                                                    <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Name="SizeLabel" VerticalAlignment="Center" Foreground="Black">Size:</TextBlock>
-                                                    <TextBox Grid.Row="0" Grid.Column="1" Name="Xp" Width="80" Background="Navy"
-                                                             Foreground="LightGray" Watermark="XP" Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="1" Grid.Column="1" Name="Level" Width="80" Background="Navy"
-                                                             Foreground="LightGray" Watermark="Level" Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="2" Grid.Column="1" Name="Ethics" Width="80" Background="Navy"
-                                                             Foreground="LightGray" Watermark="Ethics" Margin="2"></TextBox>
-                                                    <TextBox Grid.Row="3" Grid.Column="1" Name="Size" Width="80" Background="Navy"
-                                                             Foreground="LightGray" Watermark="Size" Margin="2"></TextBox>
-                                                </Grid>
-                                            </StackPanel>
+                                            <Grid Name="StrengthBased" ColumnDefinitions=".8*, .8*, 2*, *"
+                                                  RowDefinitions="*">
+                                                <!-- Row 0 -->
+                                                <CheckBox Name="AthleticsExpertise" Grid.Column="0" Grid.Row="0"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="AthleticsProficiency" Grid.Column="1" Grid.Row="0"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Athletics" Grid.Column="2" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Athletics</TextBlock>
+                                                <TextBlock Name="AthleticsModifier" Grid.Column="3" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+                                            </Grid>
+                                        </Border>
+                                        <Border BorderThickness="2" BorderBrush="Black">
+                                            <Grid Name="DexterityBased" ColumnDefinitions=".8*, .8*, 2*, *"
+                                                  RowDefinitions="*, *, *">
+                                                <!-- Row 0 -->
+                                                <CheckBox Name="AcrobaticsExpertise" Grid.Column="0" Grid.Row="0"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="AcrobaticsProficiency" Grid.Column="1" Grid.Row="0"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Acrobatics" Grid.Column="2" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Acrobatics</TextBlock>
+                                                <TextBlock Name="AcrobaticsModifier" Grid.Column="3" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 1 -->
+                                                <CheckBox Name="SleightOfHandExpertise" Grid.Column="0"
+                                                          Grid.Row="1" VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center" />
+                                                <CheckBox Name="SleightOfHandProficiency" Grid.Column="1"
+                                                          Grid.Row="1" VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center" />
+                                                <TextBlock Name="SleightOfHand" Grid.Column="2" Grid.Row="1"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Sleight of Hand</TextBlock>
+                                                <TextBlock Name="SleightOfHandModifier" Grid.Column="3"
+                                                           Grid.Row="1" VerticalAlignment="Center"
+                                                           HorizontalAlignment="Center" Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 2 -->
+                                                <CheckBox Name="StealthExpertise" Grid.Column="0" Grid.Row="2"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="StealthProficiency" Grid.Column="1" Grid.Row="2"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Stealth" Grid.Column="2" Grid.Row="2"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Stealth</TextBlock>
+                                                <TextBlock Name="StealthModifier" Grid.Column="3" Grid.Row="2"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+                                            </Grid>
+                                        </Border>
+                                        <Border BorderThickness="2" BorderBrush="Black">
+                                            <Grid Name="IntelligenceBased" ColumnDefinitions=".8*, .8*, 2*, *"
+                                                  RowDefinitions="*, *, *, *, *">
+                                                <!-- Row 0 -->
+                                                <CheckBox Name="ArcanaExpertise" Grid.Column="0" Grid.Row="0"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="ArcanaProficiency" Grid.Column="1" Grid.Row="0"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Arcana" Grid.Column="2" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Arcana</TextBlock>
+                                                <TextBlock Name="ArcanaModifier" Grid.Column="3" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 1 -->
+                                                <CheckBox Name="HistoryExpertise" Grid.Column="0" Grid.Row="1"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="HistoryProficiency" Grid.Column="1" Grid.Row="1"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="History" Grid.Column="2" Grid.Row="1"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    History</TextBlock>
+                                                <TextBlock Name="HistoryModifier" Grid.Column="3" Grid.Row="1"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 2 -->
+                                                <CheckBox Name="InvestigationExpertise" Grid.Column="0"
+                                                          Grid.Row="2" VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center" />
+                                                <CheckBox Name="InvestigationProficiency" Grid.Column="1"
+                                                          Grid.Row="2" VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center" />
+                                                <TextBlock Name="Investigation" Grid.Column="2" Grid.Row="2"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Investigation</TextBlock>
+                                                <TextBlock Name="InvestigationModifier" Grid.Column="3"
+                                                           Grid.Row="2" VerticalAlignment="Center"
+                                                           HorizontalAlignment="Center" Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 3 -->
+                                                <CheckBox Name="NatureExpertise" Grid.Column="0" Grid.Row="3"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="NatureProficiency" Grid.Column="1" Grid.Row="3"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Nature" Grid.Column="2" Grid.Row="3"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Nature</TextBlock>
+                                                <TextBlock Name="NatureModifier" Grid.Column="3" Grid.Row="3"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 4 -->
+                                                <CheckBox Name="ReligionExpertise" Grid.Column="0" Grid.Row="4"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="ReligionProficiency" Grid.Column="1" Grid.Row="4"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Religion" Grid.Column="2" Grid.Row="4"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Religion</TextBlock>
+                                                <TextBlock Name="ReligionModifier" Grid.Column="3" Grid.Row="4"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+                                            </Grid>
+                                        </Border>
+                                        <Border BorderThickness="2" BorderBrush="Black">
+                                            <Grid Name="WisdomBased" ColumnDefinitions=".8*, .8*, 2*, *"
+                                                  RowDefinitions="*, *, *, *, *">
+                                                <!-- Row 0 -->
+                                                <CheckBox Name="AnimalHandlingExpertise" Grid.Column="0"
+                                                          Grid.Row="0" VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center" />
+                                                <CheckBox Name="AnimalHandlingProficiency" Grid.Column="1"
+                                                          Grid.Row="0" VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center" />
+                                                <TextBlock Name="AnimalHandling" Grid.Column="2" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Animal Handling</TextBlock>
+                                                <TextBlock Name="AnimalHandlingModifier" Grid.Column="3"
+                                                           Grid.Row="0" VerticalAlignment="Center"
+                                                           HorizontalAlignment="Center" Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 1 -->
+                                                <CheckBox Name="InsightExpertise" Grid.Column="0" Grid.Row="1"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="InsightProficiency" Grid.Column="1" Grid.Row="1"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Insight" Grid.Column="2" Grid.Row="1"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Insight</TextBlock>
+                                                <TextBlock Name="InsightModifier" Grid.Column="3" Grid.Row="1"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 2 -->
+                                                <CheckBox Name="MedicineExpertise" Grid.Column="0" Grid.Row="2"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="MedicineProficiency" Grid.Column="1" Grid.Row="2"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Medicine" Grid.Column="2" Grid.Row="2"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Medicine</TextBlock>
+                                                <TextBlock Name="MedicineModifier" Grid.Column="3" Grid.Row="2"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 3 -->
+                                                <CheckBox Name="PerceptionExpertise" Grid.Column="0" Grid.Row="3"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="PerceptionProficiency" Grid.Column="1" Grid.Row="3"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Perception" Grid.Column="2" Grid.Row="3"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Perception</TextBlock>
+                                                <TextBlock Name="PerceptionModifier" Grid.Column="3" Grid.Row="3"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 4 -->
+                                                <CheckBox Name="SurvivalExpertise" Grid.Column="0" Grid.Row="4"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="SurvivalProficiency" Grid.Column="1" Grid.Row="4"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Survival" Grid.Column="2" Grid.Row="4"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Survival</TextBlock>
+                                                <TextBlock Name="SurvivalModifier" Grid.Column="3" Grid.Row="4"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+                                            </Grid>
+                                        </Border>
+                                        <Border BorderThickness="2" BorderBrush="Black">
+                                            <Grid Name="CharismaBased" ColumnDefinitions=".8*, .8*, 2*, *"
+                                                  RowDefinitions="*, *, *, *">
+                                                <!-- Row 0 -->
+                                                <CheckBox Name="DeceptionExpertise" Grid.Column="0" Grid.Row="0"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="DeceptionProficiency" Grid.Column="1" Grid.Row="0"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Deception" Grid.Column="2" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Deception</TextBlock>
+                                                <TextBlock Name="DeceptionModifier" Grid.Column="3" Grid.Row="0"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 1 -->
+                                                <CheckBox Name="IntimidationExpertise" Grid.Column="0" Grid.Row="1"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="IntimidationProficiency" Grid.Column="1"
+                                                          Grid.Row="1" VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center" />
+                                                <TextBlock Name="Intimidation" Grid.Column="2" Grid.Row="1"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Intimidation</TextBlock>
+                                                <TextBlock Name="IntimidationModifier" Grid.Column="3" Grid.Row="1"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 2 -->
+                                                <CheckBox Name="PerformanceExpertise" Grid.Column="0" Grid.Row="2"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="PerformanceProficiency" Grid.Column="1"
+                                                          Grid.Row="2" VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center" />
+                                                <TextBlock Name="Performance" Grid.Column="2" Grid.Row="2"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Performance</TextBlock>
+                                                <TextBlock Name="PerformanceModifier" Grid.Column="3" Grid.Row="2"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+
+                                                <!-- Row 3 -->
+                                                <CheckBox Name="PersuasionExpertise" Grid.Column="0" Grid.Row="3"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <CheckBox Name="PersuasionProficiency" Grid.Column="1" Grid.Row="3"
+                                                          VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                <TextBlock Name="Persuasion" Grid.Column="2" Grid.Row="3"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           TextWrapping="Wrap" Foreground="White">
+                                                    Persuasion</TextBlock>
+                                                <TextBlock Name="PersuasionModifier" Grid.Column="3" Grid.Row="3"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="White">
+                                                    +0</TextBlock>
+                                            </Grid>
                                         </Border>
                                     </StackPanel>
-                                </Border>
-                                <Border BorderThickness="2" BorderBrush="Black">
-                                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-                                        <!-- Current HP|Max HP|Temporary HP|StackPanel|Armor Class|Speed : DATA : Top Middle-->
-                                        
-                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="2">
-                                            <TextBlock HorizontalAlignment="Right" Name="CurrentHpLabel" VerticalAlignment="Center" Foreground="Black">Current HP:</TextBlock>
-                                            <TextBox Name="CurrentHp" Width="85" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Current" Margin="2"></TextBox>
-                                        </StackPanel>
-                                        
-                                        
-                                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto" RowDefinitions="*, *, *" Margin="2">
-                                            
-                                            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Name="MaxHpLabel" VerticalAlignment="Center" Foreground="Black">Max HP:</TextBlock>
-                                            <TextBox Grid.Row="0" Grid.Column="1" Name="MaxHp" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Max" Margin="2"></TextBox>
-                                            <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Name="TemporaryHpLabel" VerticalAlignment="Center" Foreground="Black">Temp HP:</TextBlock>
-                                            <TextBox Grid.Row="0" Grid.Column="3" Name="TemporaryHp" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Temp" Margin="2"></TextBox>
-                                            
-                                            <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="ArmorClassLabel" VerticalAlignment="Center" Foreground="Black">AC:</TextBlock>
-                                            <TextBox Grid.Row="1" Grid.Column="1" Name="ArmorClass" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="AC" Margin="2"></TextBox>
-                                            <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Name="HitDiceLabel" VerticalAlignment="Center" Foreground="Black">Hit Dice:</TextBlock>
-                                            <TextBox Grid.Row="1" Grid.Column="3" Name="HitDiceHp" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Hit Die" Margin="2"></TextBox>
-                                            
-                                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="InitiativeLabel" VerticalAlignment="Center" Foreground="Black">Initiative:</TextBlock>
-                                            <TextBox Grid.Row="2" Grid.Column="1" Name="InitiativeHp" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Initiative" Margin="2"></TextBox>
-                                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" Name="SpeedLabel" VerticalAlignment="Center" Foreground="Black">Speed:</TextBlock>
-                                            <TextBox Grid.Row="2" Grid.Column="3" Name="Speed" Width="65" Background="Navy"
-                                                     Foreground="LightGray" Watermark="Speed" Margin="2"></TextBox>
-                                        </Grid>
-                                        
-                                        <!-- <TextBlock Name="CurrentHp"></TextBlock> -->
-                                        <!-- <TextBlock Name="MaxHp"></TextBlock> -->
-                                        <!-- <TextBlock Name="TemporaryHp"></TextBlock> -->
-                                        <!-- <Border BorderThickness="2" BorderBrush="Black"> -->
-                                        <!--     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"> -->
-                                        <!--         ~1~ Initiative|Hit Dice : DATA : Top Middle @1@ -->
-                                        <!--         <TextBlock Name="Initiative"></TextBlock> -->
-                                        <!--         <TextBlock Name="HitDice"></TextBlock> -->
-                                        <!--     </StackPanel> -->
-                                        <!-- </Border> -->
-                                        <!-- <TextBlock Name="ArmorClass"></TextBlock> -->
-                                        <!-- <TextBlock Name="Speed"></TextBlock> -->
-                                    </StackPanel>
-                                </Border>
-                            </StackPanel>
-                        </Border>
-                        <Border BorderThickness="2" BorderBrush="Black">
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                <!-- Ability Scores|Skills|Spell Slots Remaining/Ability Charges : DATA : Middle Left -->
-                                <Border BorderThickness="2" BorderBrush="Black">
-                                    <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch" Background="Gray">
-                                        <TextBlock HorizontalAlignment="Center">Str</TextBlock>
-                                        <TextBox Name="Str" TextAlignment="Center" Text="{Binding StrengthText}" LostFocus="Str_OnLostFocus"/>
-                                        <TextBlock Name="StrMod" HorizontalAlignment="Center" Text="{Binding StrengthModifier}"></TextBlock>
-                                        <Rectangle Fill="Black" Height="2"></Rectangle>
-                                        
-                                        <TextBlock HorizontalAlignment="Center">Dex</TextBlock>
-                                        <TextBox Name="Dex" TextAlignment="Center">10</TextBox>
-                                        <TextBlock Name="DexMod" HorizontalAlignment="Center">0</TextBlock>
-                                        <Rectangle Fill="Black" Height="2"></Rectangle>
-
-                                        <TextBlock HorizontalAlignment="Center">Con</TextBlock>
-                                        <TextBox Name="Con" TextAlignment="Center">10</TextBox>
-                                        <TextBlock Name="ConMod" HorizontalAlignment="Center">0</TextBlock>
-                                        <Rectangle Fill="Black" Height="2"></Rectangle>
-
-                                        <TextBlock HorizontalAlignment="Center">Int</TextBlock>
-                                        <TextBox Name="Int" TextAlignment="Center">10</TextBox>
-                                        <TextBlock Name="IntMod" HorizontalAlignment="Center">0</TextBlock>
-                                        <Rectangle Fill="Black" Height="2"></Rectangle>
-
-                                        <TextBlock HorizontalAlignment="Center">Wis</TextBlock>
-                                        <TextBox Name="Wis" TextAlignment="Center">10</TextBox>
-                                        <TextBlock Name="WisMod" HorizontalAlignment="Center">0</TextBlock>
-                                        <Rectangle Fill="Black" Height="2"></Rectangle>
-
-                                        <TextBlock HorizontalAlignment="Center">Cha</TextBlock>
-                                        <TextBox Name="Cha" TextAlignment="Center">10</TextBox>
-                                        <TextBlock Name="ChaMod" HorizontalAlignment="Center">0</TextBlock>
-                                    </StackPanel>
-                                </Border>
-                                <StackPanel Name="Skills" Orientation="Vertical" VerticalAlignment="Stretch"
-                                            MaxWidth="300" MaxHeight="620" Background="SaddleBrown">
-                                    <Border BorderThickness="2" BorderBrush="DarkSlateGray">
-                                        <Grid ColumnDefinitions=".8*, .8*, 2*, *" RowDefinitions="*">
-                                            <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center" Foreground="Black">
-                                                E
-                                            </TextBlock>
-                                            <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center" Foreground="Black">
-                                                P
-                                            </TextBlock>
-                                            <TextBlock Grid.Column="2" Grid.Row="0" VerticalAlignment="Center"
-                                                       HorizontalAlignment="Left" Foreground="Black">
-                                                Skills
-                                            </TextBlock>
-                                            <TextBlock Grid.Column="3" Grid.Row="0" VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center" Foreground="Black">
-                                                Mod
-                                            </TextBlock>
-                                        </Grid>
-                                    </Border>
-                                    <Border BorderThickness="2" BorderBrush="DarkSlateGray">
-                                        <Grid Name="StrengthBased" ColumnDefinitions=".8*, .8*, 2*, *"
-                                              RowDefinitions="*">
-                                            <!-- Row 0 -->
-                                            <CheckBox Name="AthleticsExpertise" Grid.Column="0" Grid.Row="0"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="AthleticsProficiency" Grid.Column="1" Grid.Row="0"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Athletics" Grid.Column="2" Grid.Row="0"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Athletics
-                                            </TextBlock>
-                                            <TextBlock Name="AthleticsModifier" Grid.Column="3" Grid.Row="0"
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <Grid Name="SpellSlots" RowDefinitions=".2*, *, .5*, *, .5*, *, .5*, *, *" Background="SaddleBrown" Width="478">
+                                            <TextBlock Name="SpellSlotsHeader" Grid.Row="1" Foreground="White"
                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-                                        </Grid>
-                                    </Border>
-                                    <Border BorderThickness="2" BorderBrush="DarkSlateGray">
-                                        <Grid Name="DexterityBased" ColumnDefinitions=".8*, .8*, 2*, *"
-                                              RowDefinitions="*, *, *">
-                                            <!-- Row 0 -->
-                                            <CheckBox Name="AcrobaticsExpertise" Grid.Column="0" Grid.Row="0"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="AcrobaticsProficiency" Grid.Column="1" Grid.Row="0"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Acrobatics" Grid.Column="2" Grid.Row="0"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Acrobatics
-                                            </TextBlock>
-                                            <TextBlock Name="AcrobaticsModifier" Grid.Column="3" Grid.Row="0"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 1 -->
-                                            <CheckBox Name="SleightOfHandExpertise" Grid.Column="0"
-                                                      Grid.Row="1" VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center" />
-                                            <CheckBox Name="SleightOfHandProficiency" Grid.Column="1"
-                                                      Grid.Row="1" VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center" />
-                                            <TextBlock Name="SleightOfHand" Grid.Column="2" Grid.Row="1"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Sleight of Hand
-                                            </TextBlock>
-                                            <TextBlock Name="SleightOfHandModifier" Grid.Column="3"
-                                                       Grid.Row="1" VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center" Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 2 -->
-                                            <CheckBox Name="StealthExpertise" Grid.Column="0" Grid.Row="2"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="StealthProficiency" Grid.Column="1" Grid.Row="2"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Stealth" Grid.Column="2" Grid.Row="2"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Stealth
-                                            </TextBlock>
-                                            <TextBlock Name="StealthModifier" Grid.Column="3" Grid.Row="2"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-                                        </Grid>
-                                    </Border>
-                                    <Border BorderThickness="2" BorderBrush="DarkSlateGray">
-                                        <Grid Name="IntelligenceBased" ColumnDefinitions=".8*, .8*, 2*, *"
-                                              RowDefinitions="*, *, *, *, *">
-                                            <!-- Row 0 -->
-                                            <CheckBox Name="ArcanaExpertise" Grid.Column="0" Grid.Row="0"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="ArcanaProficiency" Grid.Column="1" Grid.Row="0"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Arcana" Grid.Column="2" Grid.Row="0"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Arcana
-                                            </TextBlock>
-                                            <TextBlock Name="ArcanaModifier" Grid.Column="3" Grid.Row="0"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 1 -->
-                                            <CheckBox Name="HistoryExpertise" Grid.Column="0" Grid.Row="1"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="HistoryProficiency" Grid.Column="1" Grid.Row="1"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="History" Grid.Column="2" Grid.Row="1"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                History
-                                            </TextBlock>
-                                            <TextBlock Name="HistoryModifier" Grid.Column="3" Grid.Row="1"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 2 -->
-                                            <CheckBox Name="InvestigationExpertise" Grid.Column="0"
-                                                      Grid.Row="2" VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center" />
-                                            <CheckBox Name="InvestigationProficiency" Grid.Column="1"
-                                                      Grid.Row="2" VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center" />
-                                            <TextBlock Name="Investigation" Grid.Column="2" Grid.Row="2"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Investigation
-                                            </TextBlock>
-                                            <TextBlock Name="InvestigationModifier" Grid.Column="3"
-                                                       Grid.Row="2" VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center" Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 3 -->
-                                            <CheckBox Name="NatureExpertise" Grid.Column="0" Grid.Row="3"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="NatureProficiency" Grid.Column="1" Grid.Row="3"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Nature" Grid.Column="2" Grid.Row="3"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Nature
-                                            </TextBlock>
-                                            <TextBlock Name="NatureModifier" Grid.Column="3" Grid.Row="3"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 4 -->
-                                            <CheckBox Name="ReligionExpertise" Grid.Column="0" Grid.Row="4"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="ReligionProficiency" Grid.Column="1" Grid.Row="4"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Religion" Grid.Column="2" Grid.Row="4"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Religion
-                                            </TextBlock>
-                                            <TextBlock Name="ReligionModifier" Grid.Column="3" Grid.Row="4"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-                                        </Grid>
-                                    </Border>
-                                    <Border BorderThickness="2" BorderBrush="DarkSlateGray">
-                                        <Grid Name="WisdomBased" ColumnDefinitions=".8*, .8*, 2*, *"
-                                              RowDefinitions="*, *, *, *, *">
-                                            <!-- Row 0 -->
-                                            <CheckBox Name="AnimalHandlingExpertise" Grid.Column="0"
-                                                      Grid.Row="0" VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center" />
-                                            <CheckBox Name="AnimalHandlingProficiency" Grid.Column="1"
-                                                      Grid.Row="0" VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center" />
-                                            <TextBlock Name="AnimalHandling" Grid.Column="2" Grid.Row="0"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Animal Handling
-                                            </TextBlock>
-                                            <TextBlock Name="AnimalHandlingModifier" Grid.Column="3"
-                                                       Grid.Row="0" VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center" Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 1 -->
-                                            <CheckBox Name="InsightExpertise" Grid.Column="0" Grid.Row="1"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="InsightProficiency" Grid.Column="1" Grid.Row="1"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Insight" Grid.Column="2" Grid.Row="1"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Insight
-                                            </TextBlock>
-                                            <TextBlock Name="InsightModifier" Grid.Column="3" Grid.Row="1"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 2 -->
-                                            <CheckBox Name="MedicineExpertise" Grid.Column="0" Grid.Row="2"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="MedicineProficiency" Grid.Column="1" Grid.Row="2"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Medicine" Grid.Column="2" Grid.Row="2"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Medicine
-                                            </TextBlock>
-                                            <TextBlock Name="MedicineModifier" Grid.Column="3" Grid.Row="2"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 3 -->
-                                            <CheckBox Name="PerceptionExpertise" Grid.Column="0" Grid.Row="3"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="PerceptionProficiency" Grid.Column="1" Grid.Row="3"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Perception" Grid.Column="2" Grid.Row="3"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Perception
-                                            </TextBlock>
-                                            <TextBlock Name="PerceptionModifier" Grid.Column="3" Grid.Row="3"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 4 -->
-                                            <CheckBox Name="SurvivalExpertise" Grid.Column="0" Grid.Row="4"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="SurvivalProficiency" Grid.Column="1" Grid.Row="4"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Survival" Grid.Column="2" Grid.Row="4"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Survival
-                                            </TextBlock>
-                                            <TextBlock Name="SurvivalModifier" Grid.Column="3" Grid.Row="4"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-                                        </Grid>
-                                    </Border>
-                                    <Border BorderThickness="2" BorderBrush="DarkSlateGray">
-                                        <Grid Name="CharismaBased" ColumnDefinitions=".8*, .8*, 2*, *"
-                                              RowDefinitions="*, *, *, *">
-                                            <!-- Row 0 -->
-                                            <CheckBox Name="DeceptionExpertise" Grid.Column="0" Grid.Row="0"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="DeceptionProficiency" Grid.Column="1" Grid.Row="0"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Deception" Grid.Column="2" Grid.Row="0"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Deception
-                                            </TextBlock>
-                                            <TextBlock Name="DeceptionModifier" Grid.Column="3" Grid.Row="0"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 1 -->
-                                            <CheckBox Name="IntimidationExpertise" Grid.Column="0" Grid.Row="1"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="IntimidationProficiency" Grid.Column="1"
-                                                      Grid.Row="1" VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center" />
-                                            <TextBlock Name="Intimidation" Grid.Column="2" Grid.Row="1"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Intimidation
-                                            </TextBlock>
-                                            <TextBlock Name="IntimidationModifier" Grid.Column="3" Grid.Row="1"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 2 -->
-                                            <CheckBox Name="PerformanceExpertise" Grid.Column="0" Grid.Row="2"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="PerformanceProficiency" Grid.Column="1"
-                                                      Grid.Row="2" VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center" />
-                                            <TextBlock Name="Performance" Grid.Column="2" Grid.Row="2"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Performance
-                                            </TextBlock>
-                                            <TextBlock Name="PerformanceModifier" Grid.Column="3" Grid.Row="2"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
-
-                                            <!-- Row 3 -->
-                                            <CheckBox Name="PersuasionExpertise" Grid.Column="0" Grid.Row="3"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <CheckBox Name="PersuasionProficiency" Grid.Column="1" Grid.Row="3"
-                                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                            <TextBlock Name="Persuasion" Grid.Column="2" Grid.Row="3"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                       TextWrapping="Wrap" Foreground="Black">
-                                                Persuasion
-                                            </TextBlock>
-                                            <TextBlock Name="PersuasionModifier" Grid.Column="3" Grid.Row="3"
-                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                       Foreground="Black">
-                                                +0
-                                            </TextBlock>
+                                                       FontSize="32"
+                                            >Spell Slots</TextBlock>
+                                            <Grid Name="SlotsLvlOneTwoThree" Grid.Row="3" ColumnDefinitions="*, 1.5*, 1.5*, 1.5*, *" Margin="2"
+                                                        VerticalAlignment="Center" HorizontalAlignment="Center" Width="474">
+                                                <Grid Name="SlotsOne" Grid.Column="1" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL I</TextBlock>
+                                                    <CheckBox Name="SlotOneA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotOneB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotOneC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotOneD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsTwo" Grid.Column="2" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL II</TextBlock>
+                                                    <CheckBox Name="SlotsTwoA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsTwoB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsTwoC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsTwoD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsThree" Grid.Column="3" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL III</TextBlock>
+                                                    <CheckBox Name="SlotsThreeA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsThreeB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsThreeC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsThreeD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </Grid>
+                                            <Grid Name="SlotsLvlFourFiveSix" Grid.Row="5" ColumnDefinitions="*, 1.5*, 1.5*, 1.5*, *" Margin="2"
+                                                        VerticalAlignment="Center" HorizontalAlignment="Center" Width="474">
+                                                <Grid Name="SlotsFour" Grid.Column="1" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL IV</TextBlock>
+                                                    <CheckBox Name="SlotFourA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotFourB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotFourC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotFourD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsFive" Grid.Column="2" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL V</TextBlock>
+                                                    <CheckBox Name="SlotsFiveA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsFiveB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsFiveC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsFiveD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsSix" Grid.Column="3" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL VI</TextBlock>
+                                                    <CheckBox Name="SlotsSixA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsSixB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsSixC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsSixD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </Grid>
+                                            <Grid Name="SlotsLvlSevenEightNine" Grid.Row="7" ColumnDefinitions="*, 1.5*, 1.5*, 1.5*, *" Margin="2"
+                                                        VerticalAlignment="Center" HorizontalAlignment="Center" Width="474">
+                                                <Grid Name="SlotsSeven" Grid.Column="1" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL VII</TextBlock>
+                                                    <CheckBox Name="SlotSevenA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotSevenB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotSevenC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotSevenD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsEight" Grid.Column="2" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL VIII</TextBlock>
+                                                    <CheckBox Name="SlotsEightA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsEightB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsEightC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsEightD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                                <Grid Name="SlotsNine" Grid.Column="3" ColumnDefinitions="*, *" RowDefinitions="*, *, *"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
+                                                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                               Foreground="White" Margin="2">
+                                                        LVL IX</TextBlock>
+                                                    <CheckBox Name="SlotsNineA" Grid.Column="0" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsNineB" Grid.Column="1" Grid.Row="1" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsNineC" Grid.Column="0" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                    <CheckBox Name="SlotsNineD" Grid.Column="1" Grid.Row="2" Margin="2"
+                                                              VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </Grid>
                                         </Grid>
                                     </Border>
                                 </StackPanel>
-                                <ScrollViewer Name="SpellSlotsAbilityCharges"></ScrollViewer>
-                            </StackPanel>
-                        </Border>
-                    </StackPanel>
-                </Border>
+                            </Border>
+                        </StackPanel>
+                    </Border>
 
-                <Border BorderThickness="2" BorderBrush="Black">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                        <!-- Attacks/Spells|Story : Layout : Top Right -->
-                        <Border BorderThickness="2" BorderBrush="Black">
-                            <ScrollViewer Name="AttacksSpells">
-
+                    <Border BorderThickness="2" BorderBrush="Black">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                            <!-- RacialFeats|ClasFeats|Story : Layout : Top Right -->
+                            <Border BorderThickness="2" BorderBrush="Black">
+                                <StackPanel>
+                                    <TextBlock Name="RaceFeatsHeader" Foreground="Black"
+                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               FontSize="32"
+                                    >Racial Features</TextBlock>
+                                    <ScrollViewer>
+                                        <TextBox Name="RaceFeats"
+                                                 Background="SaddleBrown" Foreground="LightGray"
+                                                 TextWrapping="Wrap" Height="736" Width="423" Margin="2"
+                                                 HorizontalAlignment="Stretch" Watermark="Put your racial features here..."/>
+                                    </ScrollViewer>
+                                </StackPanel>
+                            </Border>
+                            <Border BorderThickness="2" BorderBrush="Black">
+                                <StackPanel>
+                                    <TextBlock Name="ClassFeatsHeader" Foreground="Black"
+                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               FontSize="32"
+                                    >Class Features</TextBlock>
+                                    <ScrollViewer>
+                                        <TextBox Name="ClassFeats"
+                                                 Background="SaddleBrown" Foreground="LightGray"
+                                                 TextWrapping="Wrap" Height="736" Width="423" Margin="2"
+                                                 HorizontalAlignment="Stretch" Watermark="Put your class features here..."/>
+                                    </ScrollViewer>
+                                </StackPanel>
+                            </Border>
+                            <Border BorderThickness="2" BorderBrush="Black">
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                                    <!-- Menu|Character Traits|CharacterBackground|Backstory : DATA : Upper Right Side -->
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button Name="SaveSheet">
+                                                <Image Name="SaveSheetImage" Source="../Assets/save_sheet.png"
+                                                       Width="30" Height="30" Margin="4, 0"/>
+                                            </Button>
+                                            <Button Name="OpenSheet">
+                                                <Image Name="OpenSheetImage" Source="../Assets/open_sheet.png"
+                                                       Width="30" Height="30" Margin="4, 0"/>
+                                            </Button>
+                                            <Button Name="CloseSheet">
+                                                <Image Name="CloseSheetImage" Source="../Assets/close_sheet.png"
+                                                       Width="30" Height="30" Margin="4, 0"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                                            <!-- Personality Traits|Ideals|Bonds|Flaws : DATA : Top Right -->
+                                            <TextBlock Name="PersonalityTraitsHeader" Foreground="Black"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="2"
+                                            >Personality Traits</TextBlock>
+                                            <ScrollViewer>
+                                                <TextBox Name="PersonalityTraits"
+                                                         Background="SaddleBrown" Foreground="LightGray"
+                                                         TextWrapping="Wrap" Height="60" Width="200"
+                                                         HorizontalAlignment="Stretch" Margin="2"
+                                                         Watermark="Put your personality traits here..."/>
+                                            </ScrollViewer>
+                                            <TextBlock Name="IdealsHeader" Foreground="Black"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="2"
+                                            >Ideals</TextBlock>
+                                            <ScrollViewer>
+                                                <TextBox Name="Ideals"
+                                                         Background="SaddleBrown" Foreground="LightGray"
+                                                         TextWrapping="Wrap" Height="60" Width="200"
+                                                         HorizontalAlignment="Stretch" Margin="2"
+                                                         Watermark="Put your ideals here..."/>
+                                            </ScrollViewer>
+                                            <TextBlock Name="BondsHeader" Foreground="Black"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="2"
+                                            >Bonds</TextBlock>
+                                            <ScrollViewer>
+                                                <TextBox Name="Bonds"
+                                                         Background="SaddleBrown" Foreground="LightGray"
+                                                         TextWrapping="Wrap" Height="60" Width="200"
+                                                         HorizontalAlignment="Stretch" Margin="2"
+                                                         Watermark="Put your bonds here..."/>
+                                            </ScrollViewer>
+                                            <TextBlock Name="FlawsHeader" Foreground="Black"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="2"
+                                            >Flaws</TextBlock>
+                                            <ScrollViewer>
+                                                <TextBox Name="Flaws"
+                                                         Background="SaddleBrown" Foreground="LightGray"
+                                                         TextWrapping="Wrap" Height="60" Width="200"
+                                                         HorizontalAlignment="Stretch" Margin="2"
+                                                         Watermark="Put your flaws here..."/>
+                                            </ScrollViewer>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <StackPanel>
+                                            <TextBlock Name="BackgroundHeader" Foreground="Black"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                            >Background</TextBlock>
+                                            <TextBox Name="CharacterBackground"
+                                                     Background="SaddleBrown" Foreground="LightGray"
+                                                     TextWrapping="Wrap" Height="30" Width="200" Margin="2"
+                                                     HorizontalAlignment="Stretch" Watermark="Put your background here..."/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <StackPanel>
+                                            <TextBlock Name="BackstoryHeader" Foreground="Black"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       >Backstory</TextBlock>
+                                            <ScrollViewer>
+                                                <TextBox Name="Backstory"
+                                                Background="SaddleBrown" Foreground="LightGray"
+                                                TextWrapping="Wrap" Height="308" Width="200" Margin="2"
+                                                HorizontalAlignment="Stretch" Watermark="Put your backstory here..."/>
+                                            </ScrollViewer>
+                                        </StackPanel>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+            <Border BorderThickness="2" BorderBrush="Black">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <!-- Saves|Languages|Proficiencies|Money|Equipment : Layout : Bottom -->
+                    <Border BorderThickness="2" BorderBrush="Black">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                            <!-- Saving Throws : DATA : Bottom Left -->
+                            <Border BorderThickness="2" BorderBrush="Black">
+                                <StackPanel>
+                                    <Grid ColumnDefinitions="*, *, *, *, *, *, *, *, *" RowDefinitions="*, *, *, *, *, *"
+                                          Width="350" Height="204"
+                                          Background="SaddleBrown">
+                                        <!-- Row 0 -->
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="9"
+                                                   Name="SavingThrowsHeader" Foreground="White" Margin="2"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                        >Saving Throws</TextBlock>
+                                        <!-- Row 1a -->
+                                        <CheckBox Grid.Row="1" Grid.Column="1" Margin="2" Name="StrSaveProf"/>
+                                        <TextBlock Grid.Row="1" Grid.Column="2" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="StrSaveLabel">STR</TextBlock>
+                                        <TextBlock Grid.Row="1" Grid.Column="3" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="StrSaveMod">+0</TextBlock>
+                                        <!-- Row 1b -->
+                                        <CheckBox Grid.Row="1" Grid.Column="5" Margin="2" Name="IntSaveProf"/>
+                                        <TextBlock Grid.Row="1" Grid.Column="6" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="IntSaveLabel">INT</TextBlock>
+                                        <TextBlock Grid.Row="1" Grid.Column="7" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="IntSaveMod">+0</TextBlock>
+                                        <!-- Row 2a -->
+                                        <CheckBox Grid.Row="2" Grid.Column="1" Margin="2" Name="DexSaveProf"/>
+                                        <TextBlock Grid.Row="2" Grid.Column="2" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="DexSaveLabel">DEX</TextBlock>
+                                        <TextBlock Grid.Row="2" Grid.Column="3" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="DexSaveMod">+0</TextBlock>
+                                        <!-- Row 2b -->
+                                        <CheckBox Grid.Row="2" Grid.Column="5" Margin="2" Name="WisSaveProf"/>
+                                        <TextBlock Grid.Row="2" Grid.Column="6" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="WisSaveLabel">INT</TextBlock>
+                                        <TextBlock Grid.Row="2" Grid.Column="7" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="WisSaveMod">+0</TextBlock>
+                                        <!-- Row 3a -->
+                                        <CheckBox Grid.Row="3" Grid.Column="1" Margin="2" Name="ConSaveProf"/>
+                                        <TextBlock Grid.Row="3" Grid.Column="2" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="ConSaveLabel">CON</TextBlock>
+                                        <TextBlock Grid.Row="3" Grid.Column="3" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="ConSaveMod">+0</TextBlock>
+                                        <!-- Row 3b -->
+                                        <CheckBox Grid.Row="3" Grid.Column="5" Margin="2" Name="ChaSaveProf"/>
+                                        <TextBlock Grid.Row="3" Grid.Column="6" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="ChaSaveLabel">CHA</TextBlock>
+                                        <TextBlock Grid.Row="3" Grid.Column="7" Foreground="White"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Margin="2" Name="ChaSaveMod">+0</TextBlock>
+                                        <!-- Row 4 -->
+                                        <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="9"
+                                                   Name="DeathSavesHeader" Foreground="White" Margin="2"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                        >Death Saves</TextBlock>
+                                        <!-- Row 5a -->
+                                        <StackPanel Grid.Row="5" Grid.Column="0"
+                                                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                    Grid.ColumnSpan="9" Orientation="Horizontal">
+                                            <TextBlock Name="SuccessLabel" Foreground="White" Margin="2"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                            >Success:</TextBlock>
+                                            <CheckBox Name="Success1" Margin="2"/>
+                                            <CheckBox Name="Success2" Margin="2"/>
+                                            <CheckBox Name="Success3" Margin="2"/>
+                                            <TextBlock Name="FailLabel" Foreground="White" Margin="10, 2, 2, 2"
+                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                            >Fail:</TextBlock>
+                                            <CheckBox Name="Fail1" Margin="2"/>
+                                            <CheckBox Name="Fail2" Margin="2"/>
+                                            <CheckBox Name="Fail3" Margin="2"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderThickness="2" BorderBrush="Black">
+                        <StackPanel>
+                            <TextBlock Name="LanguagesHeader" Foreground="Black"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                            >Languages</TextBlock>
+                            <ScrollViewer>
+                                <TextBox Name="Languages"
+                                         Background="SaddleBrown" Foreground="LightGray"
+                                         TextWrapping="Wrap" Height="190" Width="320"
+                                         HorizontalAlignment="Stretch" Watermark="Put your languages here..."/>
                             </ScrollViewer>
-                        </Border>
-                        <Border BorderThickness="2" BorderBrush="Black">
-                            <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-                                <!-- Character Traits|Backstory : DATA : Upper Right Side -->
-                                <Border BorderThickness="2" BorderBrush="Black">
-                                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-                                        <!-- Personality Traits|Ideals|Bonds|Flaws : DATA : Top Right -->
-                                        <TextBlock Name="PersonalityTraits"></TextBlock>
-                                        <TextBlock Name="Ideals"></TextBlock>
-                                        <TextBlock Name="Bonds"></TextBlock>
-                                        <TextBlock Name="Flaws"></TextBlock>
-                                    </StackPanel>
-                                </Border>
-                                <TextBlock Name="Backstory"></TextBlock>
-                            </StackPanel>
-                        </Border>
-                    </StackPanel>
-                </Border>
-            </StackPanel>
-        </Border>
-        <Border BorderThickness="2" BorderBrush="Black">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                <!-- Saves/Languages|Proficiencies|Money|Equipment : Layout : Bottom -->
-                <Border BorderThickness="2" BorderBrush="Black">
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-                        <!-- Saving Throws|Languages : DATA : Bottom Left -->
-                        <Border BorderThickness="2" BorderBrush="Black">
-                            <ScrollViewer Name="SavingThrows">
-
+                        </StackPanel>
+                    </Border>
+                    <Border BorderThickness="2" BorderBrush="Black">
+                        <StackPanel>
+                            <TextBlock Name="ProficienciesHeader" Foreground="Black"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                       >Proficiencies</TextBlock>
+                            <ScrollViewer>
+                                <TextBox Name="Proficiencies"
+                                         Background="SaddleBrown" Foreground="LightGray"
+                                         TextWrapping="Wrap" Height="190" Width="320"
+                                         HorizontalAlignment="Stretch" Watermark="Put your proficiencies here..."/>
                             </ScrollViewer>
-                        </Border>
-                        <Border BorderThickness="2" BorderBrush="Black">
-                            <ScrollViewer Name="Languages">
-
+                        </StackPanel>
+                    </Border>
+                    <Border BorderThickness="2" BorderBrush="Black">
+                        <StackPanel>
+                            <ScrollViewer>
+                                <Grid Name="Money" Height="208" Width="340"
+                                         Background="SaddleBrown"
+                                         RowDefinitions="0.6*,*,*,*,*,*" ColumnDefinitions="*,*,1.4*">
+                                    <!-- Row 0 -->
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">Type</TextBlock>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">Amount</TextBlock>
+                                    <TextBlock Grid.Row="0" Grid.Column="2" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">Conversion</TextBlock>
+                                    
+                                    <!-- Row 1 -->
+                                    <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="PlatinumLabel" Margin="1">Platinum:</TextBlock>
+                                    <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                             Name="PlatinumAmount" Margin="1" Watermark="0" Width="50"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="PlatinumConversion" Margin="1">10x Gold</TextBlock>
+                                    
+                                    <!-- Row 2 -->
+                                    <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="GoldLabel" Margin="1">Gold:</TextBlock>
+                                    <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                             Name="GoldAmount" Margin="1" Watermark="0" Width="50"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="GoldConversion" Margin="1">10x Silver</TextBlock>
+                                    
+                                    <!-- Row 3 -->
+                                    <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="ElectrumLabel" Margin="1">Electrum:</TextBlock>
+                                    <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                             Name="ElectrumAmount" Margin="1" Watermark="0" Width="50"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="ElectrumConversion" Margin="1">5x Silver</TextBlock>
+                                    
+                                    <!-- Row 4 -->
+                                    <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="SilverLabel" Margin="1">Silver:</TextBlock>
+                                    <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                             Name="SilverAmount" Margin="1" Watermark="0" Width="50"/>
+                                    <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="SilverConversion" Margin="1">10x Copper</TextBlock>
+                                    
+                                    <!-- Row 5 -->
+                                    <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="CopperLabel" Margin="1">Copper:</TextBlock>
+                                    <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                             Name="CopperAmount" Margin="1" Watermark="0" Width="50"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                               Name="CopperConversion" Margin="1">0.001x Platinum</TextBlock>
+                                </Grid>
                             </ScrollViewer>
-                        </Border>
-                    </StackPanel>
-                </Border>
-                <Border BorderThickness="2" BorderBrush="Black">
-                    <ScrollViewer Name="Proficiencies">
-
-                    </ScrollViewer>
-                </Border>
-                <Border BorderThickness="2" BorderBrush="Black">
-                    <ScrollViewer Name="Money">
-
-                    </ScrollViewer>
-                </Border>
-                <Border BorderThickness="2" BorderBrush="Black">
-                    <ScrollViewer Name="Equipment">
-
-                    </ScrollViewer>
-                </Border>
-            </StackPanel>
-        </Border>
-    </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderThickness="2" BorderBrush="Black">
+                        <StackPanel>
+                            <TextBlock Name="EquipmentHeader" Foreground="Black"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                       >Equipment</TextBlock>
+                            <ScrollViewer>
+                                <TextBox Name="Equipment"
+                                         Background="SaddleBrown" Foreground="LightGray"
+                                         TextWrapping="Wrap" Height="190" Width="562"
+                                         HorizontalAlignment="Stretch" Watermark="Put your equipment here..."/>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
 
 </Window>
