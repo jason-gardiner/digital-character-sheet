@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using Avalonia.Interactivity;
+using DigitalCharacterSheet.Utilities;
 
 namespace DigitalCharacterSheet.ViewModels;
 
@@ -132,15 +133,14 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
         set => _character = value;
     }
 
-    private void OnStrengthTextChanged()
+    public void OnStrengthTextChanged()
     {
-        
+        _character.CharacterStats.Strength = StrengthScoreText.RemoveNonNumerics();
+        StrengthScoreText = _character.CharacterStats.Strength.ToString();
     }
 
     public MainViewModel()
     {
-        StrengthChanged = new RelayCommand(OnStrengthTextChanged);
+        StrengthChanged = ReactiveCommand.Create(OnStrengthTextChanged);
     }
 }
-
- */

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DigitalCharacterSheet.character;
+using ReactiveUI;
 
 namespace DigitalCharacterSheet.Character;
-public class Character
+public class Character : ReactiveObject
 {
    public Character()
    {
