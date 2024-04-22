@@ -1,15 +1,89 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Windows.Input;
-using Avalonia.Controls;
 using Avalonia.Interactivity;
-using CommunityToolkit.Mvvm.Input;
 
 namespace DigitalCharacterSheet.ViewModels;
-using Character;
-using Utilities;
 
-public class MainViewModel : ViewModelBase
+public class MainViewModel : ViewModelBase, INotifyPropertyChanged
+{
+    #region CharacterStatAccessors
+    public string StrengthText
+    {
+        get => _strengthText;
+        set
+        {
+            _strengthText = value;
+            App.LoadedCharacter.CharacterStats.Strength = int.Parse(value);
+            StrengthModifier = App.LoadedCharacter.CharacterStats.StrengthModifier.ToString();
+            NotifyPropertyChanged(nameof(StrengthText));
+        }
+    }
+    private string _strengthText = "10";
+    
+    public string StrengthModifier
+    {
+        get => _strengthModifier;
+        set
+        {
+            _strengthModifier = value;
+            NotifyPropertyChanged(nameof(StrengthModifier));
+        }
+    }
+
+    private string _strengthModifier = "0";
+    public string StrengthModText
+    {
+        get => Character.CharacterStats.StrengthModifier.ToString();
+        set => Console.WriteLine(value);
+    }
+
+    public string DexterityScoreText {
+        get => Character.CharacterStats.Dexterity.ToString();
+        set => Character.CharacterStats.Dexterity = value.RemoveNonNumerics();
+    }
+    public string ConstitutionScoreText {
+        get => Character.CharacterStats.Constitution.ToString();
+        set => Character.CharacterStats.Constitution = value.RemoveNonNumerics();
+    }
+    public string IntelligenceScoreText {
+        get => Character.CharacterStats.Intelligence.ToString();
+        set => Character.CharacterStats.Intelligence = value.RemoveNonNumerics();
+    }
+    public string WisdomScoreText {
+        get => Character.CharacterStats.Wisdom.ToString();
+        set => Character.CharacterStats.Wisdom = value.RemoveNonNumerics();
+    }
+    public string CharismaScoretext {
+        get => Character.CharacterStats.Charisma.ToString();
+        set => Character.CharacterStats.Charisma = value.RemoveNonNumerics();
+    }
+    #endregion
+
+    private Character _character = new();
+    public Character Character
+    {
+        get => _character;
+        set => _character = value;
+    }
+
+    public void Test()
+    {
+        Console.WriteLine(StrengthText);
+        switch (int.Parse(StrengthText))
+        {
+            case >= 30:
+                StrengthText = "30";
+                break;
+            case <= 0:
+                StrengthText = "0";
+                break;
+        }
+    }
+}
+
+// Old code, need some of it, so I wanna keep it
+/*
+ * public class MainViewModel : ViewModelBase
 {
     #region CharacterStatAccessors
     public string StrengthScoreText
@@ -68,3 +142,5 @@ public class MainViewModel : ViewModelBase
         StrengthChanged = new RelayCommand(OnStrengthTextChanged);
     }
 }
+
+ */
