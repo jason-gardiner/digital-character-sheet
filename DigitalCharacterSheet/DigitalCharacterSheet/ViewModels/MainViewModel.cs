@@ -39,7 +39,6 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
         set {
             _dexterityText = value.RemoveNonNumberics();
             App.LoadedCharacter.CharacterStats.Dexterity = value.ToPureInt();
-            
             NotifyPropertyChanged();
         }
     }
@@ -50,7 +49,7 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
         get => _dexterityModifier;
         set
         {
-            _dexterityText = value;
+            _dexterityModifier = value;
             NotifyPropertyChanged();
         }
     }
@@ -62,7 +61,6 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
         set {
             _constitutionText = value.RemoveNonNumberics();
             App.LoadedCharacter.CharacterStats.Constitution = value.ToPureInt();
-            ConstitutionModifier = App.LoadedCharacter.CharacterStats.ConstitutionModifier.ToString();
             NotifyPropertyChanged();
         }
     }
