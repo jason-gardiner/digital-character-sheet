@@ -37,7 +37,7 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
     public string DexterityText {
         get => _dexterityText;
         set {
-            _dexterityModifier = value.RemoveNonNumberics();
+            _dexterityText = value.RemoveNonNumberics();
             App.LoadedCharacter.CharacterStats.Dexterity = value.ToPureInt();
             
             NotifyPropertyChanged();
@@ -60,7 +60,7 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
     public string ConstitutionText {
         get => _constitutionText;
         set {
-            _constitutionModifier = value.RemoveNonNumberics();
+            _constitutionText = value.RemoveNonNumberics();
             App.LoadedCharacter.CharacterStats.Constitution = value.ToPureInt();
             ConstitutionModifier = App.LoadedCharacter.CharacterStats.ConstitutionModifier.ToString();
             NotifyPropertyChanged();
@@ -73,7 +73,7 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
         get => _constitutionModifier;
         set
         {
-            _constitutionText = value;
+            _constitutionModifier = value;
             NotifyPropertyChanged();
         }
     }
@@ -175,4 +175,17 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
     }
     
 #endregion
+
+#region Skills
+
+#endregion
+
+    public string Level {
+        get => App.LoadedCharacter.Level.ToString();
+        set
+        {
+            App.LoadedCharacter.Level = value.ToPureInt();
+            NotifyPropertyChanged();
+        }
+    }
 }
