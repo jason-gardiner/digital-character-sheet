@@ -5,15 +5,7 @@ namespace DigitalCharacterSheet.Utilities;
 
 public static class StringExtensionMethods
 {
-    public static int RemoveNonNumerics(this string str)
-    {
-        try
-        {
-            return int.Parse(str.Where(c => char.IsDigit(c)).ToArray());
-        }
-        catch (Exception ex)
-        {
-            return -1;
-        }
-    }
+    public static int ToPureInt(this string str) => str != String.Empty ? int.Parse(str.RemoveNonNumberics()) : 0;
+
+    public static string RemoveNonNumberics(this string str) => new string(str.Where(char.IsDigit).ToArray());
 }

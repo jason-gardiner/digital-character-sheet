@@ -129,33 +129,33 @@
                                     <Border BorderThickness="2" BorderBrush="Black">
                                         <StackPanel Name="AbilityScores" Orientation="Vertical" VerticalAlignment="Stretch" Background="Gray">
                                             <TextBlock HorizontalAlignment="Center" Margin="2">Str</TextBlock>
-                                            <TextBox Name="Str" TextAlignment="Center" Margin="8,2">10</TextBox>
-                                            <TextBlock Name="StrMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <TextBox x:Name="Str" TextAlignment="Center" Margin="8,2" Text="{Binding StrengthText}" LostFocus="OnStatLostFocus"/>
+                                            <TextBlock x:Name="StrMod" HorizontalAlignment="Center" Margin="2" Text="{Binding StrengthModifier}"/>
                                             <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
                                             
                                             <TextBlock HorizontalAlignment="Center" Margin="2">Dex</TextBlock>
-                                            <TextBox Name="Dex" TextAlignment="Center" Margin="8, 2">10</TextBox>
-                                            <TextBlock Name="DexMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <TextBox x:Name="Dex" TextAlignment="Center" Margin="8, 2" Text="{Binding DexterityText}" LostFocus="OnStatLostFocus"/>
+                                            <TextBlock x:Name="DexMod" HorizontalAlignment="Center" Margin="2" Text="{Binding DexterityModifier}"/>
                                             <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
 
                                             <TextBlock HorizontalAlignment="Center" Margin="2">Con</TextBlock>
-                                            <TextBox Name="Con" TextAlignment="Center" Margin="8, 2">10</TextBox>
-                                            <TextBlock Name="ConMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <TextBox x:Name="Con" TextAlignment="Center" Margin="8, 2" Text="{Binding ConstitutionText}" LostFocus="OnStatLostFocus"/>
+                                            <TextBlock x:Name="ConMod" HorizontalAlignment="Center" Margin="2" Text="{Binding ConstitutionModifier}"/>
                                             <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
 
                                             <TextBlock HorizontalAlignment="Center" Margin="2">Int</TextBlock>
-                                            <TextBox Name="Int" TextAlignment="Center" Margin="8, 2">10</TextBox>
-                                            <TextBlock Name="IntMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <TextBox x:Name="Int" TextAlignment="Center" Margin="8, 2" Text="{Binding IntelligenceText}" LostFocus="OnStatLostFocus"/>
+                                            <TextBlock x:Name="IntMod" HorizontalAlignment="Center" Margin="2" Text="{Binding IntelligenceModifier}"/>
                                             <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
 
                                             <TextBlock HorizontalAlignment="Center" Margin="2">Wis</TextBlock>
-                                            <TextBox Name="Wis" TextAlignment="Center" Margin="8, 2">10</TextBox>
-                                            <TextBlock Name="WisMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <TextBox x:Name="Wis" TextAlignment="Center" Margin="8, 2" Text="{Binding WisdomText}" LostFocus="OnStatLostFocus"/>
+                                            <TextBlock x:Name="WisMod" HorizontalAlignment="Center" Margin="2" Text="{Binding WisdomModifier}"/>
                                             <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
 
                                             <TextBlock HorizontalAlignment="Center" Margin="2">Cha</TextBlock>
-                                            <TextBox Name="Cha" TextAlignment="Center" Margin="8, 2">10</TextBox>
-                                            <TextBlock Name="ChaMod" HorizontalAlignment="Center" Margin="2">0</TextBlock>
+                                            <TextBox x:Name="Cha" TextAlignment="Center" Margin="8, 2" Text="{Binding CharismaText}" LostFocus="OnStatLostFocus"/>
+                                            <TextBlock x:Name="ChaMod" HorizontalAlignment="Center" Margin="2" Text="{Binding CharismaModifier}"/>
                                             <Rectangle Fill="Black" Height="2" Margin="0, 1"/>
                                             
                                             <TextBlock HorizontalAlignment="Center" Margin="2">Inspiration</TextBlock>
