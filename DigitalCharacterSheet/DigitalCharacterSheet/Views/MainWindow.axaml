@@ -221,7 +221,6 @@
                                                            VerticalAlignment="Center" HorizontalAlignment="Center"
                                                            Foreground="White">
                                                     +0</TextBlock>
-
                                                 <!-- Row 1 -->
                                                 <CheckBox Name="SleightOfHandExpertise" Grid.Column="0"
                                                           Grid.Row="1" VerticalAlignment="Center"
