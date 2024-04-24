@@ -15,7 +15,7 @@
         <vm:MainViewModel />
     </Design.DataContext>
 
-    <ScrollViewer>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <!-- The comments are structured as item A|item B|item C.
                 If the StackPanel is vertical, item A is the topmost.
                 If the StackPanel is horizontal, item A is the leftmost. -->
@@ -175,10 +175,10 @@
                                             <Grid ColumnDefinitions=".8*, .8*, 2*, *" RowDefinitions="*">
                                                 <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"
                                                            HorizontalAlignment="Center" Foreground="White">
-                                                    E</TextBlock>
+                                                    P</TextBlock>
                                                 <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"
                                                            HorizontalAlignment="Center" Foreground="White">
-                                                    P</TextBlock>
+                                                    E</TextBlock>
                                                 <TextBlock Grid.Column="2" Grid.Row="0" VerticalAlignment="Center"
                                                            HorizontalAlignment="Left" Foreground="White">
                                                     Skills</TextBlock>
