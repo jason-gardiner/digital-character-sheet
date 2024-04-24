@@ -7,13 +7,22 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
 {
     public string Level
     {
-        get => App.LoadedCharacter.Level.ToString();
+        get => _level;
         set
         {
+            _level = value.RemoveNonNumberics();
             App.LoadedCharacter.Level = value.ToPureInt();
             NotifyPropertyChanged();
-            UpdateSkills();
+            
         }
+    }
+
+    private string _level = App.LoadedCharacter.Level.ToString();
+
+    public void UpdateLevel()
+    {
+        Level = App.LoadedCharacter.Level.ToString();
+        UpdateSkills();
     }
 
     #region CharacterStatAccessors

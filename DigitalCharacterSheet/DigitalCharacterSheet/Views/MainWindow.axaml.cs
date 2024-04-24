@@ -24,4 +24,9 @@ public partial class MainWindow : Window
     {
         _mainViewModel.UpdateStat();
     }
+
+    private void Level_OnLostFocus(object? sender, RoutedEventArgs e)
+    {
+        _mainViewModel.UpdateLevel();
+    }
 }
