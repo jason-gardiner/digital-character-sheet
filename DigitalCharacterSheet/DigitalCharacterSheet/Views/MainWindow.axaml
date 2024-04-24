@@ -637,7 +637,7 @@
                                     <ScrollViewer>
                                         <TextBox Name="RaceFeats"
                                                  Background="SaddleBrown" Foreground="LightGray"
-                                                 TextWrapping="Wrap" Height="736" Width="423" Margin="2"
+                                                 TextWrapping="Wrap" Height="736" Width="419" Margin="2"
                                                  HorizontalAlignment="Stretch" Watermark="Put your racial features here..."/>
                                     </ScrollViewer>
                                 </StackPanel>
