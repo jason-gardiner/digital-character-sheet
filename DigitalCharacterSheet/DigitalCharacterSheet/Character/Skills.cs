@@ -7,6 +7,7 @@ using System.Reactive.Subjects;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
 namespace DigitalCharacterSheet.Character
 {
    public class Skills
@@ -388,3 +389,4 @@ namespace DigitalCharacterSheet.Character
 
    }
 }
+*/

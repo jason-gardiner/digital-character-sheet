@@ -100,28 +100,28 @@ public class CharacterStatistics
 
     public int Dexterity
     {
-        get => _statsArray.Strength;
-        set => _statsArray.Strength = value;
+        get => _statsArray.Dexterity;
+        set => _statsArray.Dexterity = value;
     }
     public int Constitution
     {
-        get => _statsArray.Strength;
-        set => _statsArray.Strength = value;
+        get => _statsArray.Constitution;
+        set => _statsArray.Constitution = value;
     }
     public int Intelligence
     {
-        get => _statsArray.Strength;
-        set => _statsArray.Strength = value;
+        get => _statsArray.Intelligence;
+        set => _statsArray.Intelligence = value;
     }
     public int Wisdom
     {
-        get => _statsArray.Strength;
-        set => _statsArray.Strength = value;
+        get => _statsArray.Wisdom;
+        set => _statsArray.Wisdom = value;
     }
     public int Charisma
     {
-        get => _statsArray.Strength;
-        set => _statsArray.Strength = value;
+        get => _statsArray.Charisma;
+        set => _statsArray.Charisma = value;
     }
 
     public int StrengthModifier => (int)MathF.Floor((Strength - 10) / 2f);

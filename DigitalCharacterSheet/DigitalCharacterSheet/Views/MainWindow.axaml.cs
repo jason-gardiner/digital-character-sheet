@@ -20,8 +20,13 @@ public partial class MainWindow : Window
         this.Loaded += (sender, args) => _mainViewModel = DataContext as MainViewModel;
     }
 
-    private void Str_OnLostFocus(object? sender, RoutedEventArgs e)
+    private void OnStatLostFocus(object? sender, RoutedEventArgs e)
     {
-        _mainViewModel.Test();
+        _mainViewModel.UpdateStat();
+    }
+
+    private void Level_OnLostFocus(object? sender, RoutedEventArgs e)
+    {
+        _mainViewModel.UpdateLevel();
     }
 }
