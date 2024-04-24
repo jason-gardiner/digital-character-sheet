@@ -170,12 +170,60 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
         
         CharismaText = App.LoadedCharacter.CharacterStats.Charisma.ToString();
         CharismaModifier = App.LoadedCharacter.CharacterStats.CharismaModifier.ToString();
+
+        UpdateSkills();
     }
     
 #endregion
 
 #region Skills
 
+    #region Athletics
+
+    public bool AthleticsExpertiseChecked
+    {
+        get => _athleticsExpertiseChecked;
+        set
+        {
+            _athleticsExpertiseChecked = value;
+            if (!value && AthleticsProficiencyChecked) AthleticsProficiencyChecked = value;
+            NotifyPropertyChanged();
+            NotifyPropertyChanged(nameof(AthleticsProficiencyChecked));
+            UpdateSkills();
+        } 
+    }
+    private bool _athleticsExpertiseChecked = false;
+    
+    public bool AthleticsProficiencyChecked
+    {
+        get => _athleticsProficiencyChecked;
+        set
+        {
+            _athleticsProficiencyChecked = value;
+            if (value) AthleticsExpertiseChecked = value;
+            NotifyPropertyChanged();
+            UpdateSkills();
+        }
+    }
+
+    private bool _athleticsProficiencyChecked = false;
+
+    public string AthleticsModifierText => 
+        (App.LoadedCharacter.CharacterStats.StrengthModifier + 
+         GetProficiencyModifier(AthleticsExpertiseChecked, AthleticsProficiencyChecked))
+        .ToString("+0;-#");
+
+    #endregion
+
+    void UpdateSkills()
+    {
+        NotifyPropertyChanged(nameof(AthleticsModifierText));
+    }
+
+    static int GetProficiencyModifier(bool expertise, bool proficiency) =>
+        ((expertise ? 1 : 0) + (proficiency ? 1 : 0)) * GetProficiencyBonus();
+    static int GetProficiencyBonus() => (App.LoadedCharacter.Level / 4) + 2;
+    
 #endregion
 
     public string Level {
@@ -184,6 +232,7 @@ public class MainViewModel : ViewModelBase, INotifyPropertyChanged
         {
             App.LoadedCharacter.Level = value.ToPureInt();
             NotifyPropertyChanged();
+            UpdateSkills();
         }
     }
 }
